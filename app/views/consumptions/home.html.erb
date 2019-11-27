@@ -1,0 +1,28 @@
+<h1>Pages#home</h1>
+
+<p>How many cigarettes did you smoke today ?</p>
+
+<%= simple_form_for @consumption do |f| %>
+
+<div class="form">
+
+  <div class= "form_nb_cigarettes">
+    <%= f.input :daily_actual_consumption, label:false, input_html: { value: @default_value, class: "btn-display" } %>
+  </div>
+
+  <div id="form_counters_submit">
+    <a class="btn btn-counter" href="#" id="counter-">-</a>
+    <%= f.button :button, "Submit", class: "btn-submit"  %>
+    <% end %>
+    <a class="btn-counter" href="#" id="counter+">+</a>
+  </div>  
+
+  
+
+</div>
+
+    
+    
+
+
+<!-- POST ou PATCH pour la valeur envoyee to the DB -->
