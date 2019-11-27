@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class GraphController < ApplicationController
 
   def home
     # so we can inject it in JS, we need to collect the result as shown below
