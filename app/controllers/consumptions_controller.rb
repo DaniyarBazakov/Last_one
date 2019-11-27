@@ -1,5 +1,6 @@
 class ConsumptionsController < ApplicationController
 
+
   def home
     @consumption = Consumption.new
     @today_consumption = current_user.consumptions.find_by(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
@@ -39,5 +40,7 @@ private
  def consumption_params
    params.require(:consumption).permit(:daily_actual_consumption)
  end
+
+
 
 end
