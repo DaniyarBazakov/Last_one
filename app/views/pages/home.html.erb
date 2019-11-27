@@ -1,13 +1,10 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <h1>Pages#home</h1> -->
 
-
-<p>Consumption: <%= @last7rb[0] %></p>
-
+<h1>MY EVOLUTION</h1>
+<!--
 <p>test Chart: <%= @last7js %></p>
 <p>test Chart2: <%= @last30 %></p>
-
-
+ -->
 
  <div class="container">
     <canvas id="myChart" data-consumptionseven="<%= @last7.to_json %>" data-consumptionthirty="<%= @last30.to_json %>" data-consumptionalltime="<%= @alltime.to_json %>"></canvas>

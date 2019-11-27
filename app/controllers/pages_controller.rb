@@ -1,17 +1,12 @@
 class PagesController < ApplicationController
 
   def home
-    @last7rb = specificlengthconsumption(7)
-    @last7js = consumptionforjs(7)
-
-# so we can inject it in JS, we need to collect the result as shown below
-# [{x: '2019-11-26', y: 1 }, {t: '2019-11-25', y: 10 }, {t: '2019-11-24', y: 20 }]
-# AKA ====> an Array of hashes / in every hash, keys are x and y, values are date and consumption
-
+    # so we can inject it in JS, we need to collect the result as shown below
+    # [{x: '2019-11-26', y: 1 }, {t: '2019-11-25', y: 10 }, {t: '2019-11-24', y: 20 }]
+    # AKA ====> an Array of hashes / in every hash, keys are x and y, values are date and consumption
     @last7 = consumptionforjs(7)
     @last30 = consumptionforjs(30)
     @alltime = consumptionforjs(alltimeappuse)
-
   end
 
   def alltimeappuse
@@ -20,8 +15,6 @@ class PagesController < ApplicationController
     alltimeappuse = (Date.today - date_of_first_entry).to_i
     return alltimeappuse
   end
-
-
 
   def consumptionforjs(span) # span must be an integer
 
@@ -42,34 +35,6 @@ class PagesController < ApplicationController
     end
 
     span_consumption
-  end
-
-
-
-
-
-
-  def specificlengthconsumption(span) # span must be an integer
-
-    @user = User.first # User.first is for testing, to be replaced by current_user
-
-    arr1 = []
-    last_span_consumption = []
-
-    # Consumption.all.each do |e|
-    #   arr0 << e if e.user_id == @user[:id] # arr0 : all time instances for current user
-    # end
-
-    @user.consumptions.each do |f|
-      arr1 << f if f.date > (Date.today - span) # arr1 : instances for last [span] days
-    end
-
-    arr1.each do |g|
-      last_span_consumption << g.daily_actual_consumption # array of integers
-    end
-
-  # returns array with daily consumption (integer) for each of the last [span] days
-    return last_span_consumption
   end
 
 end

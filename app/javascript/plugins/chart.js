@@ -13,11 +13,10 @@ import Chart from "chart.js"
     Chart.defaults.global.defaultFontColor = '#777';
 
     let ConsumptionChart = new Chart(myChart, {
-      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        // labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
         datasets:[{
-          label:'Evolution',
+          label:'Last seven days',
           data: chartTest,
           backgroundColor:'#0F0D25',
           borderWidth:1,
@@ -40,18 +39,15 @@ import Chart from "chart.js"
     });
 
 
-console.log(ConsumptionChart)
-
 document.getElementById("last7").addEventListener("click", getLastSevenConsumption);
 
 function getLastSevenConsumption() {
   chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionseven)
   ConsumptionChart = new Chart(myChart, {
-      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        // labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
         datasets:[{
-          label:'Evolution',
+          label:'Last seven days',
           data: chartTest,
           backgroundColor:'#0F0D25',
           borderWidth:1,
@@ -81,11 +77,10 @@ document.getElementById("last30").addEventListener("click", getLastThirtyConsump
 function getLastThirtyConsumption() {
   chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionthirty)
   ConsumptionChart = new Chart(myChart, {
-      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        // labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
         datasets:[{
-          label:'Evolution',
+          label:'Last thirty days',
           data: chartTest,
           backgroundColor:'#0F0D25',
           borderWidth:1,
@@ -114,11 +109,10 @@ document.getElementById("alltime").addEventListener("click", getAlltimeConsumpti
 function getAlltimeConsumption() {
   chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionalltime)
   ConsumptionChart = new Chart(myChart, {
-      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        // labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
         datasets:[{
-          label:'Evolution',
+          label:'Since the beginning',
           data: chartTest,
           backgroundColor:'#0F0D25',
           borderWidth:1,
