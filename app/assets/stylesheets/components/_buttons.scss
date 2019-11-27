@@ -1,0 +1,59 @@
+#form_counters_submit {
+  display:flex;
+  justify-content: center;
+}
+
+.form_nb_cigarettes {
+ display:flex;
+ justify-content: center; 
+}
+
+
+.btn-counter {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-counter:hover {
+  opacity: 1;
+}
+
+.btn-submit {
+  background-color: #000000;
+  color: white;
+  border: black;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: grey;
+  opacity: 1;
+}
+
+.btn-display{
+  width: 80px;
+  height: 80px;
+  background-color: #000000;
+  color: white;
+  border: black;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-size: 20px;
+}
+
+.btn-display:hover {
+  background-color: grey;
+  opacity: 1;
+}

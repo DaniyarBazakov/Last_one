@@ -1,0 +1,2 @@
+class HorribleFact < ApplicationRecord
+end

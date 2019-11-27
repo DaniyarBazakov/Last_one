@@ -1,0 +1,8 @@
+<h1>HorribleFacts#show</h1>
+<p>Find me in app/views/horrible_facts/show.html.erb</p>
+
+<% @horrible_facts.each do |hf| %>
+<p><%=hf.fact%></p>
+<img src=<%= hf.photo %>>
+      
+<% end %>
