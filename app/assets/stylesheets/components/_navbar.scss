@@ -2,9 +2,6 @@
   justify-content: space-between;
   background: white;
 }
-li {
-  display: inline;
-}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -12,4 +9,35 @@ li {
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.lo--navbar {
+  display: flex;
+  width: 100vw;
+  // height: 60px;
+  flex-direction: column;
+  align-items: center;
+  background-color: orange;
+  padding: 10px 25px;
+
+
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .title {
+      font-size: 40px;
+      font-family: $headers-font;
+      font-weight: 700;
+      color: white;
+    }
+
+    .navbar-avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
