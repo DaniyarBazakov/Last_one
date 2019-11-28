@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     @alltime = consumptionforjs(alltimeappuse)
   end
 
+
   def alltimeappuse
     @user = User.first # User.first is for testing, to be replaced by current_user
     date_of_first_entry = @user.consumptions.first["date"]
@@ -36,5 +37,6 @@ class PagesController < ApplicationController
 
     span_consumption
   end
+
 
 end
