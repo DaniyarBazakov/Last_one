@@ -27,10 +27,10 @@ def create
     @consumption = Consumption.new(consumption_params)
     @consumption.user = current_user
     @consumption.save!
-    redirect_to statistic_path
+    redirect_to graphs_home_path
   else
     today_consumption.update(consumption_params)
-    redirect_to statistic_path
+    redirect_to graphs_home_path
   end
 
 end

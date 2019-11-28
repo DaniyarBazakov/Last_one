@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'graphs/home'
   resources :consumptions, only: [:create]
   resources :horrible_facts, only: [:index, :show]
   devise_for :users
