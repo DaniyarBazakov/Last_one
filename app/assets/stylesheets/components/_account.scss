@@ -1,0 +1,27 @@
+.lo--account {
+  margin: 40px;
+
+}
+
+.lo--account-content {
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  display: flex;
+  //justify-content: flex-start;
+  //align-items: baseline;
+}
+
+.lo--account-icon {
+  font-size: 19px;
+}
+
+.lo--account-text {
+  font-size: 19px;
+  font-family: $headers-font;
+  font-weight: 700;
+}
+
+
+//1) finir le account
+//2) comment faire les couleur lineaire
