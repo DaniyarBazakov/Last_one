@@ -1,5 +1,5 @@
 <h1>HorribleFacts#index</h1>
-<p>Find me in app/views/horrible_facts/index.html.erb</p>
+
 
 <% @horrible_facts.each do |hf| %>
 <ul>
@@ -7,4 +7,6 @@
         <%= link_to "#{hf.fact}", horrible_fact_path(hf.id), class:"btn-flat4" %>
   </li>
 </ul>
+
 <% end %>
+<%= link_to "Previous page", root_path, class:"btn-flat3" %>
