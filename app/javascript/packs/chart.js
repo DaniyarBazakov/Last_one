@@ -1,6 +1,7 @@
 import Chart from "chart.js"
 
 console.log('hello again')
+
     let myChart = document.getElementById('myChart').getContext('2d');
 
     let chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionseven)

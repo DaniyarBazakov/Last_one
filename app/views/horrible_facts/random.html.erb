@@ -1,0 +1,17 @@
+<div class="main-div-hf">
+  <div class="card-fact">
+    <p><%= @horrible_facts.fact %></p> 
+  </div>
+
+  <div class="card-photo">
+   <img src= <%= @horrible_facts.photo %>>
+  </div>
+
+
+  <div class="page-bottom">
+  <p><%= link_to "NEXT", random_path, class:"page-mylink" %></p>
+  <p><%= link_to "Previous page", root_path, class:"page-mylink" %></p>
+  </div>
+  
+</div>
+    

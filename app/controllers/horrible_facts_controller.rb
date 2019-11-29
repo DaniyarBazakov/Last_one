@@ -9,6 +9,10 @@ class HorribleFactsController < ApplicationController
     @horrible_facts = HorribleFact.where(id: params[:id]) 
   end
 
+  def random
+    @horrible_facts = HorribleFact.all.sample(1)[0]
+  end
+
 end
 
 #Pages for horrible facts:

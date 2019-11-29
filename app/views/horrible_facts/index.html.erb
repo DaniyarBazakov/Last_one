@@ -1,12 +1,14 @@
-<h1>HorribleFacts#index</h1>
-
-
 <% @horrible_facts.each do |hf| %>
-<ul>
-  <li>
-        <%= link_to "#{hf.fact}", horrible_fact_path(hf.id), class:"btn-flat4" %>
-  </li>
-</ul>
-
+<div class="hf-index">
+    <h2><%= link_to "#{hf.fact}", horrible_fact_path(hf.id), class:"page-mylink" %></h2>
+</div>
 <% end %>
-<%= link_to "Previous page", root_path, class:"btn-flat3" %>
+
+<div class="page-bottom">
+<%= link_to "Previous page", root_path, class:"page-mylink" %>
+</div>
+
+
+
+
+
