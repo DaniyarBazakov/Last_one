@@ -1,3 +1,4 @@
+//old style
 #form_counters_submit {
   display:flex;
   justify-content: center;
@@ -5,7 +6,7 @@
 
 .form_nb_cigarettes {
  display:flex;
- justify-content: center; 
+ justify-content: center;
 }
 
 
@@ -50,4 +51,50 @@
   font-size: 20px;
 }
 
+.btn-display:hover {
+  background-color: grey;
+  opacity: 1;
+}
+
+
+//my style !!!!!!!!!!!!!!! dany!!!
+.lo--button-white {
+  background: white;
+  border-radius: 40px;
+  padding: 15px 32px;
+  color: $dark-gray;
+  font-family: $btn-font;
+}
+
+.lo--button-mauve {
+ background: $dark-gray;
+  border-radius: 40px;
+  padding: 15px 32px;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: $btn-font;
+}
+
+.lo--button-circle {
+ background: $dark-gray;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin: auto;
+  // padding: 32px 32px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: $btn-font;
+  a {
+    color: white;
+  }
+}
 
