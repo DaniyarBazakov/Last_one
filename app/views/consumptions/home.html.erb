@@ -7,7 +7,7 @@
 <div class="form">
 
   <div class= "form_nb_cigarettes">
-    <%= f.input :daily_actual_consumption, label:false, input_html: { value: @default_value, class: "btn-display" } %>
+    <%= f.input :daily_actual_consumption, label:false, input_html: { value: @default_value, class: "btn-display", type: "" } %>
   </div>
 
   <div id="form_counters_submit">
@@ -17,12 +17,17 @@
     <a class="btn-counter" href="#" id="counter+">+</a>
   </div>  
 
-  
-
 </div>
 
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+
+<%= javascript_pack_tag 'form_incrementation' %>
+
+
+
+
+
+
     
     
 
-
-<!-- POST ou PATCH pour la valeur envoyee to the DB -->

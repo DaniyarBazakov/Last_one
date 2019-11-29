@@ -1,8 +1,27 @@
-<h1>HorribleFacts#show</h1>
-<p>Find me in app/views/horrible_facts/show.html.erb</p>
-
 <% @horrible_facts.each do |hf| %>
-<p><%=hf.fact%></p>
-<img src=<%= hf.photo %>>
-      
+
+<div class="main-div-hf">
+
+  <div class="card-fact">
+    <p><%=hf.fact%></p>
+  </div>
+
+  <div class="card-photo">
+   <img src=<%= hf.photo %>>
+  </div>
+
+  <div class="page-bottom">
+    <p><%= link_to "NEXT", random_path, class:"page-mylink" %></p>
+    <p><%= link_to "Previous page", horrible_facts_path, class:"page-mylink" %></p>
+  </div>
+    
+</div
+
 <% end %>
+
+
+
+
+
+
+

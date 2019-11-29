@@ -8,11 +8,18 @@
 
 HorribleFact.destroy_all
 
-horrible_fact1 = HorribleFact.create!({ fact: "smoking causes multiple cancers", photo:"https://www.cdc.gov/cancer/tobacco/images/tobacco-use-causes-cancer.jpg" })
+horrible_fact1 = HorribleFact.create!({ fact: "Smoking causes multiple cancers", photo:"https://www.cdc.gov/cancer/tobacco/images/tobacco-use-causes-cancer.jpg" })
 
-horrible_fact2 = HorribleFact.create!({ fact: "smoking damages your lungs", photo:"https://www.parashospitals.com/wp-content/uploads/2018/11/Scientists-Explain-What-Smoking-Every-Day-Does-To-Your-Lungs.png"})
+horrible_fact2 = HorribleFact.create!({ fact: "Smoking damages your lungs", photo:"https://www.parashospitals.com/wp-content/uploads/2018/11/Scientists-Explain-What-Smoking-Every-Day-Does-To-Your-Lungs.png"})
 
+horrible_fact3 = HorribleFact.create!({ fact: "On average, the life expectancy of a smoker is 10 years less than a nonsmoker.", photo:"http://www.vancouversun.com/health/cms/binary/4041076.jpg?size=640x420"})
 
+horrible_fact4 = HorribleFact.create!({ fact: "Cigarette smoke contains more than 7,000 chemicals, 70 of which are known to cause cancer.
+", photo:"https://lig-up.net/uploads/media/article_image/0001/01/180124174643-infog-tabac-llcc.jpeg"})
+
+horrible_fact5 = HorribleFact.create!({ fact: "Smoking causes cancer, heart disease, stroke, diabetes and lung diseases.", photo:"https://previews.123rf.com/images/lightwise/lightwise1608/lightwise160800020/60688204-smoking-death-and-danger-concept-as-a-cigarette-burning-with-people-falling-and-escaping-the-hot-bur.jpg"})
+
+horrible_fact6 = HorribleFact.create!({ fact: "Smoking is responsible for about 1 in 5 deaths annually in the United States.", photo:"https://miro.medium.com/max/3840/1*PVONOOaXtK6ceyKU_dBg8w.jpeg"})
 
 
 puts 'Cleaning database...'
