@@ -42,6 +42,7 @@ def create
   if today_consumption == nil
     @consumption = Consumption.new(consumption_params)
     @consumption.user = current_user
+    @consumption.date = Date.today
     @consumption.save!
     redirect_to graphs_home_path
   else

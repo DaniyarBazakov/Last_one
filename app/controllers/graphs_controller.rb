@@ -11,7 +11,9 @@ class GraphsController < ApplicationController
   end
 
   def alltimeappuse
-    @user = User.first # User.first is for testing, to be replaced by current_user
+    # @user = User.find(current_user[:id])
+    # User.first is for testing, to be replaced by current_user
+    @user = current_user
     date_of_first_entry = @user.consumptions.first["date"]
     alltimeappuse = (Date.today - date_of_first_entry).to_i
     return alltimeappuse
@@ -19,7 +21,9 @@ class GraphsController < ApplicationController
 
   def consumptionforjs(span) # span must be an integer
 
-    @user = User.first # User.first is for testing, to be replaced by current_user
+    # @user = User.find(current_user[:id])
+    # User.first is for testing, to be replaced by current_user
+    @user = current_user
 
     arr1 = []
     span_consumption = []
