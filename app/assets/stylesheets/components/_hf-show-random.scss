@@ -6,7 +6,7 @@
 }
 
 .card-photo {
-  background-color: black;
+  background-color: transparent;
   justify-content: center;
   display: flex; /* put the text in the middle of the div (based on the height) */
   align-items: center;
@@ -22,7 +22,7 @@
 
 .card-fact {
   // height: 120px;
-  background: black;
+  background: transparent;
   color: white;
   justify-content: center;
   display: flex; /* put the text in the middle of the div (based on the height) */
