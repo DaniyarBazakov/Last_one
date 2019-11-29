@@ -37,10 +37,10 @@
   opacity: 1;
 }
 
-.btn-display{
+.lo--btn-display{
   width: 80px;
   height: 80px;
-  background-color: #000000;
+  background-color: transparent;
   color: white;
   border: black;
   text-align: center;
@@ -48,7 +48,7 @@
   font-weight: bold;
   opacity: 1;
   transition: opacity 0.3s ease;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .btn-display:hover {

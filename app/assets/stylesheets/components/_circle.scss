@@ -1,13 +1,14 @@
 .lo--circle {
   border-color: $color-circle;
-    border-style: solid;
-    border-width: 10px;
-    border-radius: 50%;
-    width: 150px;
-    display: flex;
-    height: 150px;
-    align-items: center;
-    justify-content: space-evenly;
+  border-style: solid;
+  border-width: 10px;
+  border-radius: 50%;
+  width: 150px;
+  display: flex;
+  margin: auto;
+  height: 150px;
+  align-items: center;
+  justify-content: space-evenly;
 
   //justify-content: space-around;
 }

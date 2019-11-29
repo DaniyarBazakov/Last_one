@@ -50,5 +50,18 @@
   color:white;
   border-bottom: 2px solid black;
 
+}
 
+.lo--btn-display{
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  color: white;
+  border: black;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-size: 40px;
 }

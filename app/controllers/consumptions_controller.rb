@@ -1,16 +1,17 @@
 class ConsumptionsController < ApplicationController
 
 
-  
+
     #I have to code something in order to enable to access the website even if the user is not logged in
-  
-    
+
+
 
 
 def home
+  @navbar_title = "Daily Summary"
   if !user_signed_in?
     redirect_to new_user_session_path
-  else   
+  else
     @consumption = Consumption.new
     @today_consumption = current_user.consumptions.find_by(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
     if @today_consumption == nil
@@ -20,10 +21,10 @@ def home
     end
   end
 end
-    
+
 
   def update
-      
+
   end
 
 def index

@@ -8,28 +8,31 @@
 .card-photo {
   background-color: black;
   justify-content: center;
-  display: flex; /* put the text in the middle of the div (based on the height) */     
+  display: flex; /* put the text in the middle of the div (based on the height) */
   align-items: center;
 }
 
 .card-photo img {
-  height: 600px; /*This solution is the best -- I checked with Martin */
-  /*We have to get the image centered */ 
+  max-width: 90%;
+  margin: auto;
+  object-fit:cover;
+  // height: 600px; /*This solution is the best -- I checked with Martin */
+  /*We have to get the image centered */
 }
 
 .card-fact {
-  height: 120px;
+  // height: 120px;
   background: black;
   color: white;
   justify-content: center;
-  display: flex; /* put the text in the middle of the div (based on the height) */     
+  display: flex; /* put the text in the middle of the div (based on the height) */
   align-items: center;
-  
+
 }
 
 .card-fact p {
   font-family: arial;
-  font-size: 32px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
 }
@@ -37,15 +40,14 @@
 
 
 .page-bottom {
-  background-color: black; 
+  background-color: black;
   align-items: center;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 .page-mylink {
- background-color: black;
   color: white;
   font-weight: bold;
 }

@@ -1,4 +1,4 @@
-
+<div class="lo--main-container">
 
 <h1>How many cigarettes did you smoke today ?</h1>
 
@@ -6,15 +6,16 @@
 
 <div class="form">
 
-  <div class= "form_nb_cigarettes">
-    <%= f.input :daily_actual_consumption, label:false, input_html: { value: @default_value, class: "btn-display", type: "" } %>
+  <div class= "lo--circle">
+    <%= f.input :daily_actual_consumption, label:false, input_html: { value: @default_value, class: "lo--btn-display", type: "" } %>
   </div>
 
   <div id="form_counters_submit">
     <a class="lo--button-circle" href="#" id="counter-">-</a>
+    <a class="lo--button-circle" href="#" id="counter+">+</a>
     <%= f.button :button, "Submit", class: "lo--button-white"  %>
     <% end %>
-    <a class="lo--button-circle" href="#" id="counter+">+</a>
+
   </div>
 
 </div>
@@ -26,7 +27,7 @@
 <%= javascript_pack_tag 'form_incrementation' %>
 
 
-
+</div>
 
 
 
