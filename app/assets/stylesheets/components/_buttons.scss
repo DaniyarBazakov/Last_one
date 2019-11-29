@@ -8,6 +8,13 @@
   font-family: $btn-font;
 }
 
+.consumptionbtns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 50px;
+}
+
 .lo--button-mauve {
  background: $dark-gray;
   border-radius: 40px;
@@ -43,14 +50,33 @@
 .lo--button-transp {
   display: flex;
   justify-content: center;
-  padding: 15px 32px;
+  padding: 15px 0px;
 
   color: $dark-gray;
   font-family: $btn-font;
+  color:grey;
+
+  margin: 0 8px;
+}
+
+.lo--button-transp:active {
   color:white;
   border-bottom: 2px solid black;
-
+  margin: 0 8px;
 }
+
+.lo--button-transp:focus {
+  color:white;
+  border-bottom: 2px solid black;
+  margin: 0 8px;
+}
+
+.lo--button-transp:target {
+
+  color:white;
+  border-bottom: 2px solid black;
+}
+
 
 .lo--btn-display{
   width: 80px;
