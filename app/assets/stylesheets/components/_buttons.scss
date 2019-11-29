@@ -40,3 +40,15 @@
   }
 }
 
+.lo--button-transp {
+  display: flex;
+  justify-content: center;
+  padding: 15px 32px;
+
+  color: $dark-gray;
+  font-family: $btn-font;
+  color:white;
+  border-bottom: 2px solid black;
+
+
+}
