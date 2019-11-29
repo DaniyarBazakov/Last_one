@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'graphs/home'
+
+  get '/graphs/home'
   get '/statistic', to: "pages#home"
   get 'horrible_facts/random', to: "horrible_facts#random", as: :random
   resources :consumptions, only: [:create, :update]
