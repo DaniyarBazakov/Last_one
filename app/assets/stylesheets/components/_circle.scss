@@ -1,0 +1,23 @@
+.lo--circle {
+  border-color: $color-circle;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50%;
+    width: 150px;
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-evenly;
+
+  //justify-content: space-around;
+}
+
+.lo--circle-text {
+  //justify-content: space-around;
+  font-family: $circle;
+}
+
+.lo--circle-main {
+  display: flex;
+  justify-content: space-around;
+}

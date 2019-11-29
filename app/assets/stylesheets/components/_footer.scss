@@ -1,0 +1,26 @@
+
+.lo--footer {
+  display:flex;
+  justify-content: space-evenly;
+    align-items: center;
+    background-color: #0C0B1D;
+    height: 60px;
+}
+
+.lo--footer-content {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lo--footer-icon {
+  color: white;
+  font-size: 12px;
+}
+
+.lo--footer-text {
+  font-size: 12px;
+  color: white;
+}
+
