@@ -1,19 +1,26 @@
 .lo--account {
   margin: 40px;
-
+  background: linear-gradient(rgb(139, 145, 163), rgba(255, 255, 255, 0));
+  border-radius: 4px;
+  padding: 8px;
 }
 
 .lo--account-content {
-  border-color: black;
-  border-style: solid;
-  border-width: 1px;
+  // border-color: black;
+  // border-style: solid;
+  // border-width: 1px;
+  border-bottom: 1px solid white;
+  padding: 24px 8px;
   display: flex;
-  //justify-content: flex-start;
   //align-items: baseline;
+  &:last-child {
+    border-bottom: 0px;
+  }
 }
 
 .lo--account-icon {
   font-size: 19px;
+  padding-right: 8px;
 }
 
 .lo--account-text {
