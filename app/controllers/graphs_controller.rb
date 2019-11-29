@@ -1,6 +1,7 @@
 class GraphsController < ApplicationController
 
   def home
+    @navbar_title = "Evolution"
     # so we can inject it in JS, we need to collect the result as shown below
     # [{x: '2019-11-26', y: 1 }, {t: '2019-11-25', y: 10 }, {t: '2019-11-24', y: 20 }]
     # AKA ====> an Array of hashes / in every hash, keys are x and y, values are date and consumption
