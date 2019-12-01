@@ -1,7 +1,6 @@
 import Chart from "chart.js"
 
 console.log('hello again')
-
     let myChart = document.getElementById('myChart').getContext('2d');
 
     let chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionseven)
@@ -12,6 +11,8 @@ console.log('hello again')
     Chart.defaults.global.defaultFontFamily = 'Lato';
     Chart.defaults.global.defaultFontSize = 18;
     Chart.defaults.global.defaultFontColor = '#777';
+    Chart.defaults.scale.ticks.beginAtZero = true;
+    Chart.defaults.global.responsive = true;
 
     let ConsumptionChart = new Chart(myChart, {
       type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
@@ -65,6 +66,13 @@ function getLastSevenConsumption() {
                 time: {
                     unit: 'day'
                 }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    min: 0
+                }
             }]
         }
     }
@@ -98,6 +106,13 @@ function getLastThirtyConsumption() {
                 time: {
                     unit: 'day'
                 }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    min: 0
+                }
             }]
         }
     }
@@ -129,6 +144,13 @@ function getAlltimeConsumption() {
                 distribution: 'series',
                 time: {
                     unit: 'day'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    beginAtZero: true,
+                    min: 0
                 }
             }]
         }
