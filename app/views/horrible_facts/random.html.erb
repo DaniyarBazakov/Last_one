@@ -42,7 +42,7 @@
 
 
 </div>
-
+<meta property="og:image"         content=<%= @horrible_facts.photo %>/>
 
 <%= javascript_pack_tag 'slider' %>
 
@@ -61,6 +61,10 @@
 
 <!-- Your share button code -->
 <div class="fb-share-button"
+  data-href="https://mylast1.herokuapp.com/"
+  data-layout="button_count">
+</div>
+    
   data-href="https://www.your-domain.com/your-page.html"
   data-layout="button_count">
 </div>
