@@ -13,7 +13,7 @@ class HorribleFactsController < ApplicationController
 
   def random
     @navbar_title = "Horrible Facts"
-    @horrible_facts = HorribleFact.all.sample(1)[0]
+    @horrible_facts = HorribleFact.all
   end
 
 end

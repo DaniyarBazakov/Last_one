@@ -1,7 +1,8 @@
 <div class="lo--main-container">
 
+<div class="div-for-headers">
 <h1>How many cigarettes did you smoke today ?</h1>
-
+</div>
 <%= simple_form_for @consumption do |f| %>
 
 <div class="form">
@@ -11,7 +12,11 @@
   </div>
 
   <div id="form_counters_submit">
-    <a class="lo--button-circle" href="#" id="counter-">-</a>
+
+    <div class="consumptionbtns">
+      <a class="lo--button-circle" href="#" id="counter-">-</a>
+      <a class="lo--button-circle" href="#" id="counter+">+</a>
+    </div>
     <%= f.button :button, "Submit", class: "lo--button-white"  %>
     <a class="lo--button-circle" href="#" id="counter+">+</a>
     <% end %>

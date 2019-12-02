@@ -8,6 +8,7 @@ class GraphsController < ApplicationController
     @last7 = consumptionforjs(7)
     @last30 = consumptionforjs(30)
     @alltime = consumptionforjs(alltimeappuse)
+    @dayslost = sec_to_j(lifeloss)
   end
 
   def alltimeappuse
@@ -29,7 +30,7 @@ class GraphsController < ApplicationController
     span_consumption = []
 
     @user.consumptions.each do |f|
-      arr1 << f if f.date > (Date.today - span) # arr1 : instances for last [span] days
+      arr1 << f if f.date >= (Date.today - span) # arr1 : instances for last [span] days
     end
 
     arr1.each do |g|
@@ -41,5 +42,22 @@ class GraphsController < ApplicationController
 
     span_consumption
   end
+
+
+
+  def lifeloss
+    @user = current_user
+    arr1 = []
+    @user.consumptions.each do |c|
+      arr1 << c.daily_actual_consumption
+    end
+    arr1.sum*11*60
+  end
+
+
+  def sec_to_j(sec)
+    sec / 86400.to_i
+  end
+
 
 end
