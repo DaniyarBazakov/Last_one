@@ -75,7 +75,7 @@ Consumption.create!({user: user1, daily_actual_consumption: 31, date: Date.new(2
 Consumption.create!({user: user1, daily_actual_consumption: 30, date: Date.new(2019,11,26)})
 Consumption.create!({user: user1, daily_actual_consumption: 30, date: Date.new(2019,11,27)})
 Consumption.create!({user: user1, daily_actual_consumption: 29, date: Date.new(2019,11,28)})
-Consumption.create!({user: user1, daily_actual_consumption: 28, date: Date.new(2019,11,29)})
+Consumption.create!({user: user1, consumption_before_last_one: 60, daily_actual_consumption: 28, date: Date.new(2019,11,29)})
 
 puts 'Finished!'
 

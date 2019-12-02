@@ -1,3 +1,11 @@
+<!-- app/views/offers/show.html.erb -->
+
+<% @horrible_fact = @horrible_facts.first %>
+<% content_for :meta_title, "Another horrible fact 111" %>
+<% content_for :meta_description, @horrible_fact.fact %>
+<% content_for :meta_image, @horrible_fact.photo %>
+
+
 <div class="lo--main-container">
 
 
@@ -39,6 +47,7 @@
 
 <!-- Your share button code -->
 <div class="fb-share-button"
-  data-href="https://www.your-domain.com/your-page.html"
+  data-href="https://mylast1.herokuapp.com/"
   data-layout="button_count">
 </div>
+

@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
 
+  get 'savings/index'
   get '/graphs/home'
   get '/statistic', to: "pages#home"
   get 'horrible_facts/random', to: "horrible_facts#random", as: :random
   resources :consumptions, only: [:create, :update]
   resources :horrible_facts, only: [:index, :show,]
+  resources :savings, only: [:index]
   devise_for :users
 
   root to: 'consumptions#home'
