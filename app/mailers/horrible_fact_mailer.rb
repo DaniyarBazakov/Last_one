@@ -8,7 +8,8 @@ class HorribleFactMailer < ApplicationMailer
     @user = params[:user] # Instance variable => available in view
     @horriblefactphoto = HorribleFact.all.sample(1)[0].photo
     @horriblefacttext = HorribleFact.all.sample(1)[0].fact
-    mail(to: @user.email, subject: 'Stop smoking !!!')
+    # mail(to: @user.email, subject: 'Stop smoking !!!')
+    mail(to: 'jovialiste82@yahoo.fr', subject: 'Stop smoking !!!')
     # This will render a view in `app/views/horrible_fact_mailer`!
   end
 

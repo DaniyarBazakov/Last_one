@@ -21,6 +21,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'whenever', require: false
+  gem 'letter_opener'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

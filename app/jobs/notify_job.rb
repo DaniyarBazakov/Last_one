@@ -4,7 +4,7 @@ class NotifyJob < ApplicationJob
   def perform(*args)
     # Do something later
 
-    UserMailer.scareuser
+    HorribleFactMailer.scareuser
 
   end
 end
