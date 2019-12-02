@@ -1,10 +1,18 @@
 .hf-index {
-  height: 100px;
-  background: black;
+  background: transparent;
   color:white;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid white;
+  width: 90%;
+  margin: 24px auto;
+  border-radius: 77px;
+  padding: 24px 16px;
+  &:first-child {
+    margin-top: 40px;
+  }
+
 }
 
 
@@ -12,6 +20,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  text-align: center;
 }
 
 
