@@ -6,17 +6,27 @@
   padding: 15px 32px;
   color: $dark-gray;
   font-family: $btn-font;
+  width: 220px;
+
+}
+
+.consumptionbtns{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 50px;
 }
 
 .lo--button-mauve {
  background: $dark-gray;
   border-radius: 40px;
-  padding: 15px 32px;
+  padding: 8px 5px;
   color: white;
   border-color: white;
   border-style: solid;
   border-width: 1px;
   font-family: $btn-font;
+  width: 150px;
 }
 
 .lo--button-circle {
@@ -26,8 +36,8 @@
  justify-content: center;
  align-items: center;
 
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
   margin: auto;
   // padding: 32px 32px;
@@ -43,14 +53,33 @@
 .lo--button-transp {
   display: flex;
   justify-content: center;
-  padding: 15px 32px;
+  padding: 15px 0px;
 
   color: $dark-gray;
   font-family: $btn-font;
+  color:grey;
+
+  margin: 0 8px;
+}
+
+.lo--button-transp:active {
   color:white;
   border-bottom: 2px solid black;
-
+  margin: 0 8px;
 }
+
+.lo--button-transp:focus {
+  color:white;
+  border-bottom: 2px solid black;
+  margin: 0 8px;
+}
+
+.lo--button-transp:target {
+
+  color:white;
+  border-bottom: 2px solid black;
+}
+
 
 .lo--btn-display{
   width: 80px;
@@ -65,3 +94,26 @@
   transition: opacity 0.3s ease;
   font-size: 40px;
 }
+
+.horrible_facts-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+//create a button with symbols (flesh like bonjour hi)
+
+//headers centré
+
+//
+
+
+//javascript?  if not need help with the text inside the button
+
+
+//A ben, corriger le previous page sur random horrible facts
+
+
