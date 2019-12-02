@@ -1,3 +1,9 @@
+<% @horrible_fact = @horrible_facts.first %>
+<% content_for :meta_title, "Another horrible fact 111" %>
+<% content_for :meta_description, @horrible_fact.fact %>
+<% content_for :meta_image, @horrible_fact.photo %>
+
+
 <div class="lo--main-container">
 
 <div class="main-div-hf">
@@ -22,17 +28,18 @@
 
 
 <div class="horrible-fact-slider">
-  <% @horrible_facts.each do |horrible_fact| %>
+  <% @horrible_facts.each do |hf| %>
+  <div id="<%= hf.id %>" class="main-div-hf random-card">
 
-    <div class="random-card">
 
       <div class="card-fact">
-        <p><%= horrible_fact.fact %></p>
+      
+        <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
       </div>
 
       <div class="card-photo">
-       <img src= <%= horrible_fact.photo %>>
-      </div>
+       <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
+      </div>  
     </div>
 
   <% end %>
@@ -42,10 +49,9 @@
 
 
 </div>
-<meta property="og:image"         content=<%= @horrible_facts.photo %>/>
+
 
 <%= javascript_pack_tag 'slider' %>
-
 
 
 
@@ -62,7 +68,8 @@
 <!-- Your share button code -->
 <div class="fb-share-button"
   data-href="https://mylast1.herokuapp.com/"
-  data-layout="button_count">
+  data-layout="button_count"
+  style="margin-top: auto; margin-bottom: 100px">
 </div>
     
   data-href="https://www.your-domain.com/your-page.html"

@@ -12,14 +12,14 @@
 
   <% @horrible_facts.each do |hf| %>
 
-  <div class="main-div-hf">
+  <div id="<%= hf.id %>" class="main-div-hf">
 
     <div class="card-fact">
-      <p><%=hf.fact%></p>
+      <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
     </div>
 
     <div class="card-photo">
-     <img src=<%= hf.photo %> >
+     <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
     </div>
 
     <div class="page-bottom">
