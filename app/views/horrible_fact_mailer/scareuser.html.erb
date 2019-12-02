@@ -3,16 +3,21 @@
 test it here : http://localhost:3000/rails/mailers/horrible_fact_mailer/scareuser
 -->
 
-<div class="container">
 
-<p>Hi <%= @user.email %>,</p>
 
-<h1>STOP SMOKING OR THIS WILL HAPPEN TO YOU</h1>
 
-<p><%= @horriblefacttext %></p>
-<br>
+<div class="loo-scareuser-main">
+  <div class="loo-scareuser-container">
+    <div class="loo-scareuser-up">
+      <p>Hi <%= @user.email %>,</p>
+      <h1>STOP SMOKING OR THIS WILL HAPPEN TO YOU</h1>
+    </div>
+    <div class="loo-scareuser-fact">
+      <p><%= @horriblefacttext %></p>
+      <img class="scareuser-img" src="<%= @horriblefactphoto %>" alt="">
+    </div>
 
-<!-- href must be modified before pushing to heroku !!! -->
-<a href="http://localhost:3000/"><img src="<%= @horriblefactphoto %>" alt=""></a>
+    <a href="http://localhost:3000/"><p>How many cigarettes did you smoke today?</p></a>
 
+  </div>
 </div>
