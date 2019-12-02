@@ -1,5 +1,5 @@
 <% @horrible_fact = @horrible_facts.first %>
-<% content_for :meta_title, "Another horrible fact 111" %>
+<% content_for :meta_title, "This is what happens when you smoke" %>
 <% content_for :meta_description, @horrible_fact.fact %>
 <% content_for :meta_image, @horrible_fact.photo %>
 
@@ -25,19 +25,21 @@
   </div>
 
   <div class="horrible-fact-slider">
+
     <% @horrible_facts.each do |hf| %>
+
       <div>
+
         <div id="<%= hf.id %>" class="main-div-hf random-card">
 
-
-          <div class="card-fact">
-          
+          <div class="card-fact">   
             <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
           </div>
 
           <div class="card-photo">
            <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
-          </div>  
+          </div> 
+
         </div>
 
         <!-- Load Facebook SDK for JavaScript -->
