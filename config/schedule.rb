@@ -6,8 +6,8 @@ set :output, "log/cron.log"
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
 
-    every 2.minutes do
-      rake ":notify"
+    every 1.minute do
+      rake :notify
     end
 
 

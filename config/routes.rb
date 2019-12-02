@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
 
+  get 'challengeyourself/deposit'
+  get 'challengeyourself/withdraw'
+  get 'challengeyourself/bet'
   get 'savings/index'
   get '/graphs/home'
   get '/statistic', to: "pages#home"

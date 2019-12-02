@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
 
    has_many :consumptions
+   has_many :bets
 
 end
