@@ -6,6 +6,8 @@
   padding: 15px 32px;
   color: $dark-gray;
   font-family: $btn-font;
+  width: 220px;
+
 }
 
 .consumptionbtns{
@@ -18,12 +20,13 @@
 .lo--button-mauve {
  background: $dark-gray;
   border-radius: 40px;
-  padding: 15px 32px;
+  padding: 8px 5px;
   color: white;
   border-color: white;
   border-style: solid;
   border-width: 1px;
   font-family: $btn-font;
+  width: 150px;
 }
 
 .lo--button-circle {
@@ -33,8 +36,8 @@
  justify-content: center;
  align-items: center;
 
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   border-radius: 100%;
   margin: auto;
   // padding: 32px 32px;
@@ -91,3 +94,26 @@
   transition: opacity 0.3s ease;
   font-size: 40px;
 }
+
+.horrible_facts-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+
+
+//create a button with symbols (flesh like bonjour hi)
+
+//headers centré
+
+//
+
+
+//javascript?  if not need help with the text inside the button
+
+
+//A ben, corriger le previous page sur random horrible facts
+
+

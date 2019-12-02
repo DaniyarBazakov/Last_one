@@ -1,5 +1,16 @@
-h1 {
-  color: white;
-  font-family: $btn-font;
-  font-size: 30px;
+
+
+.div-for-headers {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: white;
+    font-family: $headers-font;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    padding: 24px;
+
+  }
 }
