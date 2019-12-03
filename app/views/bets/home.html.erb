@@ -22,8 +22,8 @@ Your balance is : <%= @user.wallet %> CAD
 <%= form_tag(deposits_path, method: :post) do  %>
   <div style="padding-top: 20px">
   <p>Deposit</p>
-  <%= number_field(:user, :wallet) %>
-  <%= submit_tag %>
+  <%= number_field_tag("user[wallet]", 0) %>
+  <%= submit_tag("Submit deposit") %> <!-- placeholder ?  -->
   <div>
 <% end %>
 
@@ -31,8 +31,8 @@ Your balance is : <%= @user.wallet %> CAD
 <%= form_tag(withdrawals_path, method: :post) do  %>
   <div style="padding-top: 20px">
   <p>Withdraw</p>
-  <%= number_field(:user, :wallet) %>
-  <%= submit_tag %>
+  <%= number_field_tag("user[wallet]", 0) %> <!-- placeholder ?  -->
+  <%= submit_tag("Submit withdrawal") %>
   <div>
 <% end %>
 

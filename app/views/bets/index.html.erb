@@ -12,9 +12,17 @@
 
     <ul>
       <% @pendingbets.each do |b| %>
-      <li>Bet ID <%= b.id %> - Amount : <%= b.amount %></li>
+        <li>Bet ID <%= b.id %> - Amount : <%= b.amount %>
+         <% if Date.today > b.date + 7 %>
+  - Check the result
+         <% else %>
+   - Results available on <%= b.date + 7 %>
+         <% end %>
+        </li>
       <% end %>
     </ul>
+
+    <%= link_to "Previous page", bets_home_path %>
 
   <% end %>
 

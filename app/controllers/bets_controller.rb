@@ -33,45 +33,31 @@ class BetsController < ApplicationController
 
   def create
     @user = current_user
+    # raise
     @bet = Bet.new(bet_params)
-    # write code to update wallet
-    newamount = @user.wallet - @bet.amount
-    if newamount >= @user.wallet
-      @user.wallet = newamount
-      # write code to create bet and update amount
+    if @bet.amount <= @user.wallet
+      @bet.date = Date.today
+      # write code to update wallet
+      @user.wallet -= @bet.amount
+      @user.save!
+      # write code to update new bet
+      @bet.user = current_user
       @bet.status = 'pending'
-      # @bet.amount = bet_params
-      @bet.save
-        redirect_to bets_home_path
+      # @bet.date = Date.today
+      @bet.save!
+      redirect_to bets_home_path
+      # flash[:alert] = 'Challenge submitted !'
+      # format.html { redirect_to bets_home_path, alert: 'Challenge submitted !' }
     else
       # code to show some error
       redirect_to new_bet_path
+      # flash[:alert] = 'Not enough money on your balance'
+      # format.html { redirect_to new_bet_path, alert: 'Not enough money on your balance' }
     end
   end
 
   def checkmybet
-    @user = current_user
-    # write code to fetch user's bets which are pending
-    pendingbets = []
-    @user.bets.each do |b|
-      pendingbets << b if b.status == pending
-    end
-    # check if Date.today allows to settle bets
-    betstosettle = []
-    arr1.each do |b|
-      betstosettle << b if b.date < Date.today - 7
-    end
-    # refund money if bet is won and update the status
-    if # bet is won
-      betstosettle.each do |b|
-        b.user.wallet += b.amount
-        b.status = "won"
-        # display a winning msg
-      end
-    else
-      b.status = "lost"
-      # display a "you lost" message
-    end
+
   end
 
 private

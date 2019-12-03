@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def deposit
     @user = current_user
+    # raise
     # write code to update wallet
     inputdeposit =  params[:user][:wallet].to_i
     @user.wallet += inputdeposit
@@ -11,6 +12,7 @@ class UsersController < ApplicationController
 
   def withdraw
     @user = current_user
+    # raise
     # write code to update wallet
     inputwithdraw = params[:user][:wallet].to_i
     if inputwithdraw > @user.wallet
