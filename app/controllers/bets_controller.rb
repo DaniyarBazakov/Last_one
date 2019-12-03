@@ -1,4 +1,4 @@
-class ChallengeyourselfController < ApplicationController
+class BetsController < ApplicationController
 
   def home
     @user = current_user
@@ -20,39 +20,32 @@ class ChallengeyourselfController < ApplicationController
   end
 
 
-  def deposit
-    @user = current_user
-    # write code to update wallet
-    @inputdeposit = 0
-    newamount = @user.wallet + @inputdeposit
-    @user.wallet = newamount
-
+  def show
   end
 
-  def withdraw
-    @user = current_user
-    # write code to update wallet
-    newamount = @user.wallet - inputwithdraw
-    if newamount < @user.wallet
-      # code to show some error
-    else
-      @user.wallet = newamount
-      # code to confirm withdrawal
-    end
+
+
+
+
+  def new
+    @bet = Bet.new
   end
 
-  def submitabet
+  def create
     @user = current_user
+    @bet = Bet.new(bet_params)
     # write code to update wallet
-    newamount = @user.wallet - inputbet
-    if newamount < @user.wallet
-      # code to show some error
-    else
+    newamount = @user.wallet - @bet.amount
+    if newamount >= @user.wallet
       @user.wallet = newamount
       # write code to create bet and update amount
-      @bet = Bet.create
       @bet.status = 'pending'
-      @bet.amount = inputbet
+      # @bet.amount = bet_params
+      @bet.save
+        redirect_to bets_home_path
+    else
+      # code to show some error
+      redirect_to new_bet_path
     end
   end
 
@@ -80,5 +73,12 @@ class ChallengeyourselfController < ApplicationController
       # display a "you lost" message
     end
   end
+
+private
+
+def bet_params
+  params.require(:bet).permit(:amount)
+end
+
 
 end
