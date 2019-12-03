@@ -1,6 +1,9 @@
 class GraphsController < ApplicationController
 
   def home
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    else
     @navbar_title = "Evolution"
     # so we can inject it in JS, we need to collect the result as shown below
     # [{x: '2019-11-26', y: 1 }, {t: '2019-11-25', y: 10 }, {t: '2019-11-24', y: 20 }]
@@ -9,6 +12,7 @@ class GraphsController < ApplicationController
     @last30 = consumptionforjs(30)
     @alltime = consumptionforjs(alltimeappuse)
     @dayslost = sec_to_j(lifeloss)
+    end
   end
 
   def alltimeappuse

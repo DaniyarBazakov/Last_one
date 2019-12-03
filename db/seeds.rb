@@ -72,8 +72,6 @@ horrible_fact29 = HorribleFact.create!({ fact: "Studies have shown that smoking 
 
 horrible_fact30 = HorribleFact.create!({ fact: "Smoking causes wounds to heal slower because it reduces blood flow to the skin.", photo:"https://www.woundsource.com/sites/default/files/styles/large/public/blogs/hand_wound.jpg?itok=MtHDzhf_"})
 
-
-
 puts 'Creating users...'
 user1 = User.create!({email: 'user1@gmail.com', password: "philippe"})
 user2 = User.create!({email: 'user2@gmail.com', password: "philippe"})
@@ -85,7 +83,7 @@ puts 'Creating consumptions...'
 i = 60
 
 until i == 55
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(44..49), date: Date.today - i})
+Consumption.create!({user: user1, consumption_before_last_one: 60, daily_actual_consumption: Random.new.rand(44..49), date: Date.today - i})
 i -= 1
 end
 
@@ -140,13 +138,15 @@ i -= 1
 end
 
 until i == 0
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(19..25), date: Date.today - i})
+Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(23...24), date: Date.today - i})
 i -= 1
 end
 
 puts 'Creating one Challenge older than 7 days...'
 
+
 Bet.create!({user: user1, date: Date.today - 10, amount: 9, status: "pending"})
+
 
 puts 'Finished!'
 

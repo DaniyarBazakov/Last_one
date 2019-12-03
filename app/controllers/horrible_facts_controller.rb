@@ -2,7 +2,11 @@ class HorribleFactsController < ApplicationController
 
   def index
     @navbar_title = "Horrible Facts"
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    else
     @horrible_facts = HorribleFact.all
+    end
   end
 
   def show
@@ -13,7 +17,11 @@ class HorribleFactsController < ApplicationController
 
   def random
     @navbar_title = "Horrible Facts"
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    else
     @horrible_facts = HorribleFact.all
+    end
   end
 
 end
