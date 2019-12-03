@@ -1,0 +1,40 @@
+<div class="container" style="padding-top: 80px">
+<!-- <h1>Bets#home</h1> -->
+<!-- <p>Find me in app/views/bets/home.html.erb</p> -->
+
+<div style="padding-top: 20px">
+You have <%= @pendingbets.length %> pending challenge<%= @pendingbets.size == 0 ? "" : "s" %>.
+</div>
+
+<div style="padding-top: 20px">
+<%= link_to "Check my challenges", bets_path %>
+</div>
+
+<div style="padding-top: 20px">
+<%= link_to "Submit a challenge", new_bet_path %>
+</div>
+
+<div style="padding-top: 20px">
+Your balance is : <%= @user.wallet %> CAD
+</div>
+
+
+<%= form_tag(deposits_path, method: :post) do  %>
+  <div style="padding-top: 20px">
+  <p>Deposit</p>
+  <%= number_field_tag("user[wallet]", 0) %>
+  <%= submit_tag("Submit deposit") %> <!-- placeholder ?  -->
+  <div>
+<% end %>
+
+
+<%= form_tag(withdrawals_path, method: :post) do  %>
+  <div style="padding-top: 20px">
+  <p>Withdraw</p>
+  <%= number_field_tag("user[wallet]", 0) %> <!-- placeholder ?  -->
+  <%= submit_tag("Submit withdrawal") %>
+  <div>
+<% end %>
+
+
+</div>

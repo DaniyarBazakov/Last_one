@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
 
    has_many :consumptions
-   has_many :bets
+   has_many :bets, dependent: :destroy
 
 end

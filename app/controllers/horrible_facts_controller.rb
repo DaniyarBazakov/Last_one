@@ -12,7 +12,7 @@ class HorribleFactsController < ApplicationController
   def show
     @navbar_title = "Horrible Facts"
     #display the HF once the user has clicks on one horrible fact OR display one HF randomly
-    @horrible_facts = HorribleFact.where(id: params[:id])
+    @horrible_fact = HorribleFact.find(params[:id])
   end
 
   def random
