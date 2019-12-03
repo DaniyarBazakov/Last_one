@@ -2,7 +2,10 @@
 
 
 .main-div-hf{
-
+  min-height: calc(100vh - 60px - 70px);
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 
 .card-photo {
@@ -16,6 +19,7 @@
   max-width: 90%;
   margin: auto;
   object-fit:cover;
+
   // height: 600px; /*This solution is the best -- I checked with Martin */
   /*We have to get the image centered */
 }
@@ -28,19 +32,24 @@
   display: flex; /* put the text in the middle of the div (based on the height) */
   align-items: center;
 
-}
 
-.card-fact p {
+   p {
   font-family: arial;
   font-size: 22px;
   font-weight: bold;
   margin: 0;
+  padding: 24px 24px;
+  text-align: center;
+
+}
+
+
 }
 
 
 
 .page-bottom {
-  background-color: black;
+  background-color: transparent;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -58,6 +67,12 @@
 
 }
 
+
+.btn-and-share {
+  text-align: center;
+  padding-bottom: 20px;
+
+}
 
 
 

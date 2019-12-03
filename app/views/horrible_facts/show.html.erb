@@ -1,53 +1,58 @@
-<!-- app/views/offers/show.html.erb -->
 
 <% @horrible_fact = @horrible_facts.first %>
-<% content_for :meta_title, "Another horrible fact 111" %>
+<% content_for :meta_title, "This is what happens when you smoke" %>
+
 <% content_for :meta_description, @horrible_fact.fact %>
 <% content_for :meta_image, @horrible_fact.photo %>
 
 
-<div class="lo--main-container">
+<div class="lo--main-container" >
 
 
 
-  <% @horrible_facts.each do |hf| %>
+<% @horrible_facts.each do |hf| %>
+    <div>
 
-  <div id="<%= hf.id %>" class="main-div-hf">
+      <div id="<%= hf.id %>" class="main-div-hf">
 
-    <div class="card-fact">
-      <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
+        <div class="card-fact">
+          <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
+        </div>
+
+        <div class="card-photo">
+          <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
+        </div>
+
+
+        <div class="page-bottom">
+          <p><%= link_to "Previous page", horrible_facts_path, class:"page-mylink" %></p>
+        </div>
+
+
+      </div>
+
+
+            <!-- Load Facebook SDK for JavaScript -->
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            <!-- Your share button code -->
+            <div class="fb-share-button"
+              data-href="https://mylast1.herokuapp.com/horrible_facts/<%= hf.id %>"
+              data-layout="button_count"
+              style="margin-top: auto; margin-bottom: 100px">
+            </div>
+
+
     </div>
-
-    <div class="card-photo">
-     <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
-    </div>
-
-    <div class="page-bottom">
-      <p><%= link_to "NEXT", random_path, class:"page-mylink" %></p>
-      <p><%= link_to "Previous page", horrible_facts_path, class:"page-mylink" %></p>
-    </div>
-
-  </div>
-
   <% end %>
-
-
 </div>
+  
 
-
-<!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-<!-- Your share button code -->
-<div class="fb-share-button"
-  data-href="https://mylast1.herokuapp.com/"
-  data-layout="button_count">
-</div>
 

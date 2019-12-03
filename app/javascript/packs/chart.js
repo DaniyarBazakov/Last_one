@@ -1,44 +1,77 @@
 import Chart from "chart.js"
 
+const chartBackgroundColour = 'rgba(0, 0, 0, 0)';
+
 console.log('hello again')
-    let myChart = document.getElementById('myChart').getContext('2d');
+let myChart = document.getElementById('myChart').getContext('2d');
 
-    let chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionseven)
+let chartTest = JSON.parse(document.getElementById('myChart').dataset.consumptionseven)
 
 
 
-    // Global Options
-    Chart.defaults.global.defaultFontFamily = 'Lato';
-    Chart.defaults.global.defaultFontSize = 18;
-    Chart.defaults.global.defaultFontColor = '#777';
-    Chart.defaults.scale.ticks.beginAtZero = true;
-    Chart.defaults.global.responsive = true;
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 12;
+Chart.defaults.global.defaultFontColor = '#777';
+Chart.defaults.scale.ticks.beginAtZero = true;
+Chart.defaults.global.responsive = true;
 
-    let ConsumptionChart = new Chart(myChart, {
-      type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
-      data:{
-        datasets:[{
-          label:'Last seven days',
-          data: chartTest,
-          backgroundColor:'#0F0D25',
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000'
-        }]
-      },
-      options: {
-        scales: {
-            xAxes: [{
-                type: 'time',
-                distribution: 'series',
-                time: {
-                    unit: 'day'
-                }
-            }]
+let ConsumptionChart = new Chart(myChart, {
+  type:'line', // options: bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  data:{
+    datasets:[{
+      label:'Last seven days',
+      data: chartTest,
+      backgroundColor: chartBackgroundColour,
+      borderWidth: 2,
+      borderColor: 'white',
+      hoverBorderWidth: 3,
+      hoverBorderColor: '#000'
+    }]
+  },
+  options: {
+    legend: {
+      labels: {
+        boxWidth: 0,
+        fontColor: "#ffffff",
+        fontFamily: "sans-serif"
+      }
+    },
+    title: {
+      display: true,
+      text: 'Cigarettes',
+      position: "left",
+      fontColor: "#ffffff"
+    },
+    scales: {
+      xAxes: [{
+        type: 'time',
+        distribution: 'series',
+        time: {
+            unit: 'day'
+        },
+        ticks: {
+          fontColor: "#ffffff",
+          fontFamily: "sans-serif"
         }
+        // gridLines: {
+        //   color: "red"
+        // }
+      }],
+      yAxes: [{
+        display: true,
+        ticks: {
+            beginAtZero: true,
+            min: 0
+        },
+        ticks: {
+          fontColor: "#ffffff",
+          fontFamily: "sans-serif"
+        }
+      }]
     }
-    });
+  }
+});
 
 
 document.getElementById("last7").addEventListener("click", getLastSevenConsumption);
@@ -51,20 +84,37 @@ function getLastSevenConsumption() {
         datasets:[{
           label:'Last seven days',
           data: chartTest,
-          backgroundColor:'#0F0D25',
-          borderWidth:1,
-          borderColor:'#777',
+          backgroundColor: chartBackgroundColour,
+          borderWidth:2,
+          borderColor:'white',
           hoverBorderWidth:3,
           hoverBorderColor:'#000'
         }]
       },
       options: {
+        legend: {
+          labels: {
+            boxWidth: 0,
+            fontColor: "#ffffff",
+            fontFamily: "sans-serif"
+          }
+        },
+        title: {
+          display: true,
+          text: 'Cigarettes',
+          position: "left",
+          fontColor: "#ffffff"
+        },
         scales: {
             xAxes: [{
                 type: 'time',
                 distribution: 'series',
                 time: {
                     unit: 'day'
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }],
             yAxes: [{
@@ -72,6 +122,10 @@ function getLastSevenConsumption() {
                 ticks: {
                     beginAtZero: true,
                     min: 0
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }]
         }
@@ -91,20 +145,37 @@ function getLastThirtyConsumption() {
         datasets:[{
           label:'Last thirty days',
           data: chartTest,
-          backgroundColor:'#0F0D25',
-          borderWidth:1,
-          borderColor:'#777',
+          backgroundColor: chartBackgroundColour,
+          borderWidth:2,
+          borderColor:'white',
           hoverBorderWidth:3,
           hoverBorderColor:'#000'
         }]
       },
       options: {
+        legend: {
+          labels: {
+            boxWidth: 0,
+            fontColor: "#ffffff",
+            fontFamily: "sans-serif"
+          }
+        },
+        title: {
+          display: true,
+          text: 'Cigarettes',
+          position: "left",
+          fontColor: "#ffffff"
+        },
         scales: {
             xAxes: [{
                 type: 'time',
                 distribution: 'series',
                 time: {
                     unit: 'day'
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }],
             yAxes: [{
@@ -112,6 +183,10 @@ function getLastThirtyConsumption() {
                 ticks: {
                     beginAtZero: true,
                     min: 0
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }]
         }
@@ -130,20 +205,37 @@ function getAlltimeConsumption() {
         datasets:[{
           label:'Since the beginning',
           data: chartTest,
-          backgroundColor:'#0F0D25',
-          borderWidth:1,
-          borderColor:'#777',
+          backgroundColor: chartBackgroundColour,
+          borderWidth:2,
+          borderColor:'white',
           hoverBorderWidth:3,
           hoverBorderColor:'#000'
         }]
       },
       options: {
+        legend: {
+          labels: {
+            boxWidth: 0,
+            fontColor: "#ffffff",
+            fontFamily: "sans-serif"
+          }
+        },
+        title: {
+          display: true,
+          text: 'Cigarettes',
+          position: "left",
+          fontColor: "#ffffff"
+        },
         scales: {
             xAxes: [{
                 type: 'time',
                 distribution: 'series',
                 time: {
                     unit: 'day'
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }],
             yAxes: [{
@@ -151,6 +243,10 @@ function getAlltimeConsumption() {
                 ticks: {
                     beginAtZero: true,
                     min: 0
+                },
+                ticks: {
+                  fontColor: "#ffffff",
+                  fontFamily: "sans-serif"
                 }
             }]
         }

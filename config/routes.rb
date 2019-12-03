@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'bets/home'
   get 'savings/index'
   get '/graphs/home'
