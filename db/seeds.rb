@@ -144,7 +144,9 @@ Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(19..
 i -= 1
 end
 
+puts 'Creating one Challenge older than 7 days...'
 
+Bet.create!({user: user1, date: Date.today - 10, amount: 9, status: "pending"})
 
 puts 'Finished!'
 

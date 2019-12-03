@@ -1,0 +1,16 @@
+<div class="container" style="padding-top: 80px">
+<h1>Bets#new</h1>
+<!-- <p>Find me in app/views/bets/new.html.erb</p> -->
+
+<h1>This is where you must code a form to submit a bet</h1>
+
+
+
+<%= simple_form_for(@bet) do |f| %>
+  <%= f.input :amount, label: 'Please type the amount', required: true %>
+  <%= f.button :submit, "Submit your challenge" %>
+<% end %>
+
+</div>
+
+
