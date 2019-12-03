@@ -1,5 +1,4 @@
 <!-- <h1>Graphs#home</h1> -->
-<div>
 
   <div class="lo--main-container">
 
@@ -14,7 +13,7 @@
 
 
     <div class="container d-flex">
-      <div id="last7" class="lo--button-transp">Last 7 days</div>
+      <div id="last7" class="lo--button-transp active">Last 7 days</div>
       <div id="last30" class="lo--button-transp">Last 30 days</div>
       <div id="alltime" class="lo--button-transp">From start</div>
     </div>
@@ -23,7 +22,6 @@
 
 
     <%= javascript_pack_tag 'chart' %>
-
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -44,14 +42,42 @@
 
 <div style="margin-top: 50px">
   <div id="lifeloss" style="text-align: center">
-    <p style="color: white" >Since you started using our app, you have lost</p>
-    <h1 style="color: red"><%= @dayslost %> days</h1>
-    <p style="color: white">of life expectancy...</p>
+    <p style="color: white; font-family: Poppins;" >Since you started using our app, you have lost</p>
+    <h1 style="color: red; font-family: Poppins;"><%= @dayslost %> DAYS</h1>
+    <p style="color: white; font-family: Poppins;">of life expectancy...</p>
     <br>
-    <p style="color: white">Do you really want to lose more time ???</p>
+    <p style="color: white; font-family: Poppins;">Do you really want to lose more time ???</p>
   </div>
 </div>
 
 </div>
+
+<script>
+  document.querySelectorAll(".lo--button-transp").forEach(element => {
+    element.addEventListener('click', (event) => {
+      document.querySelectorAll(".lo--button-transp").forEach(el =>{
+        el.classList.remove("active");
+      })
+      event.currentTarget.classList.add("active")
+
+    })
+
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1,15 +1,16 @@
+
 <% @horrible_fact = @horrible_facts.first %>
 <% content_for :meta_title, "This is what happens when you smoke" %>
+
 <% content_for :meta_description, @horrible_fact.fact %>
 <% content_for :meta_image, @horrible_fact.photo %>
 
 
-<div class="lo--main-container">
+<div class="lo--main-container" >
 
 
 
-  <% @horrible_facts.each do |hf| %>
-
+<% @horrible_facts.each do |hf| %>
     <div>
 
       <div id="<%= hf.id %>" class="main-div-hf">
@@ -22,11 +23,14 @@
           <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
         </div>
 
+
         <div class="page-bottom">
           <p><%= link_to "Previous page", horrible_facts_path, class:"page-mylink" %></p>
         </div>
 
+
       </div>
+
 
             <!-- Load Facebook SDK for JavaScript -->
             <div id="fb-root"></div>
@@ -45,8 +49,10 @@
               style="margin-top: auto; margin-bottom: 100px">
             </div>
 
+
     </div>
   <% end %>
 </div>
   
+
 
