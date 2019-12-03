@@ -32,8 +32,6 @@ horrible_fact9 = HorribleFact.create!({ fact: "On average, smoking will cut 13 y
 
 
 
-
-
 puts 'Creating users...'
 user1 = User.create!({email: 'user1@gmail.com', password: "philippe"})
 user2 = User.create!({email: 'user2@gmail.com', password: "philippe"})
@@ -45,7 +43,7 @@ puts 'Creating consumptions...'
 i = 60
 
 until i == 55
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(44..49), date: Date.today - i})
+Consumption.create!({user: user1, consumption_before_last_one: 60, daily_actual_consumption: Random.new.rand(44..49), date: Date.today - i})
 i -= 1
 end
 
@@ -100,10 +98,9 @@ i -= 1
 end
 
 until i == 0
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(19..25), date: Date.today - i})
+Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(23...24), date: Date.today - i})
 i -= 1
 end
-
 
 
 puts 'Finished!'

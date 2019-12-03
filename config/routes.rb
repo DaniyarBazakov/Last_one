@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'savings/saving'
   get 'challengeyourself/deposit'
   get 'challengeyourself/withdraw'
   get 'challengeyourself/bet'
