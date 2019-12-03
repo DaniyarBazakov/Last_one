@@ -1,0 +1,33 @@
+<div class="container" style="padding-top: 80px">
+<!-- <h1>Challengeyourself#home</h1> -->
+<!-- <p>Find me in app/views/challengeyourself/home.html.erb</p> -->
+
+<div style="padding-top: 20px">
+You have <%= @pendingbets.length %> pending challenge<%= @pendingbets.size == 0 ? "" : "s" %>.
+</div>
+
+<div style="padding-top: 20px">
+Your balance is : <%= @user.wallet %> CAD
+</div>
+
+<div style="padding-top: 20px">
+<%= link_to "Check my challenges", challengeyourself_index_path %>
+</div>
+
+<div style="padding-top: 20px">
+<%= link_to "Submit a challenge", challengeyourself_bet_path %>
+</div>
+
+
+
+  <div>
+    <%= f.input :daily_actual_consumption, label:false, input_html: { value: 0, type: integer } %>
+  </div>
+
+  <div>
+    <%= f.input :daily_actual_consumption, label:false, input_html: { value: 0, type: integer } %>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,23 @@
+<div class="container" style="padding-top: 80px">
+<h1>Challengeyourself#index</h1>
+<!-- <p>Find me in app/views/challengeyourself/index.html.erb</p> -->
+
+  <% if @pendingbets.length == 0 %>
+
+  <p>You have no pending challenges</p>
+
+  <% else %>
+
+    <h5>Your pending challenges:</h5>
+
+    <ul>
+      <% @pendingbets.each do |b| %>
+      <li>Bet ID <%= b.id %> - Amount : <%= b.amount %></li>
+      <% end %>
+    </ul>
+
+  <% end %>
+
+
+
+</div>
