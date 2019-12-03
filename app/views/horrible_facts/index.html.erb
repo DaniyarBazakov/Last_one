@@ -1,10 +1,17 @@
 <div class="lo--main-container">
 
-  <% @horrible_facts.each do |hf| %>
-    <div class="hf-index">
-      <h2><%= link_to hf.fact, horrible_fact_path(hf.id), class:"page-mylink" %></h2>
-    </div>
-  <% end %>
+
+
+
+  <div class="hf-index">
+      <h2><%= link_to "Display horribles facts RANDOMLY", random_path, class:"page-mylink" %></h2>
+  </div>
+
+<% @horrible_facts.each do |hf| %>
+<div class="hf-index">
+    <h2><%= link_to hf.fact, horrible_fact_path(hf.id), class:"page-mylink" %></h2>
+</div>
+<% end %>
 
 
 
