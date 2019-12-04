@@ -142,10 +142,15 @@ Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(23..
 i -= 1
 end
 
-puts 'Creating one Challenge older than 7 days...'
+puts 'Creating some Challenges older than 7 days...'
 
 
-Bet.create!({user: user1, date: Date.today - 10, amount: 9, status: "pending"})
+Bet.create!({user: user1, goal: 600, date: Date.today - 10, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 610, date: Date.today - 9, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 620, date: Date.today - 8, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 5, date: Date.today - 10, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 4, date: Date.today - 9, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 3, date: Date.today - 8, amount: 10, status: "pending"})
 
 
 puts 'Finished!'
