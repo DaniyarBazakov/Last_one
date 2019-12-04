@@ -13,9 +13,9 @@
 <ul>
         <% @pendingbets.each do |b| %>
   <% if Date.today > b.date + 7 %>
-<li>Bet ID <%= b.id %> - Amount : <%= b.amount %> - Goal : <%= b.goal %> - <%= link_to "Check the result", bet_path(:id => b.id) %></li>
+<li>Bet ID <%= b.id %> - Amount : <%= b.amount %> C$ - Goal : <%= b.goal %> cigarettes - <%= link_to "Check the result", bet_path(:id => b.id) %></li>
   <% else %>
-<li>Bet ID <%= b.id %> - Amount : <%= b.amount %> - Goal : <%= b.goal %> - Results available on <%= b.date + 7 %></li>
+<li>Bet ID <%= b.id %> - Amount : <%= b.amount %> C$ - Goal : <%= b.goal %> cigarettes - Results available on <%= b.date + 7 %></li>
         <% end %>
       <% end %>
 </ul>

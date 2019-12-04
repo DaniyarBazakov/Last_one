@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-
+  get 'pages/menu'
   get 'bets/home'
   get 'savings/index'
   get '/graphs/home'

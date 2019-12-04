@@ -145,12 +145,12 @@ end
 puts 'Creating some Challenges older than 7 days...'
 
 
-Bet.create!({user: user1, goal: 600, date: Date.today - 10, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 610, date: Date.today - 9, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 620, date: Date.today - 8, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 5, date: Date.today - 10, amount: 10, status: "pending"})
-Bet.create!({user: user1, goal: 4, date: Date.today - 9, amount: 10, status: "pending"})
-Bet.create!({user: user1, goal: 3, date: Date.today - 8, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 210, date: Date.today - 10, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 215, date: Date.today - 9, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 220, date: Date.today - 8, amount: 12, status: "pending"})
+Bet.create!({user: user1, goal: 150, date: Date.today - 10, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 155, date: Date.today - 9, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 160, date: Date.today - 8, amount: 10, status: "pending"})
 
 
 puts 'Finished!'
