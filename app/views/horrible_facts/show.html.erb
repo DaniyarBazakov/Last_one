@@ -1,6 +1,4 @@
-
 <% @horrible_f = @horrible_fact.first %>
-
 <% content_for :meta_title, "This is what happens when you smoke" %>
 <% content_for :meta_description, @horrible_f.fact %>
 <% content_for :meta_image, @horrible_f.photo %>
@@ -16,14 +14,14 @@
 
   <div>
 
-    <div id="<%= @horrible_fact.id %>" class="main-div-hf">
+    <div id="<%= hf.id %>" class="main-div-hf">
 
       <div class="card-fact">
-        <p class="<%= @horrible_fact.id %>-fact"><%=@horrible_fact.fact%></p>
+        <p class="<%= hf.id %>-fact"><%= hf.fact%></p>
       </div>
 
       <div class="card-photo">
-        <img class="<%= @horrible_fact.id %>-photo" src=<%= @horrible_fact.photo %> >
+        <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
       </div>
 
 
@@ -47,7 +45,7 @@
 
           <!-- Your share button code -->
           <div class="fb-share-button"
-            data-href="https://mylast1.herokuapp.com/horrible_facts/<%= @horrible_fact.id %>"
+            data-href="https://mylast1.herokuapp.com/horrible_facts/<%= hf.id %>"
             data-layout="button_count"
             style="margin-top: auto; margin-bottom: 100px">
           </div>
@@ -55,6 +53,4 @@
 
   </div>
 </div>
-
-
-
+<% end %>
