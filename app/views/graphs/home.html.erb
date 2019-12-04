@@ -37,7 +37,9 @@
       data-href="https://www.your-domain.com/your-page.html"
       data-layout="button_count">
     </div>
-
+    <div class="savings">
+      <p>Based on your initial daily consumption, since the beginning you have saved: <%= @money_saved.round(2) %> <i style="font-size:44px" class="fa">&#xf155;</i> (Average price of 0.75 CAD per cigarette)</p>
+    </div>
   </div>
 
 <!-- <div style="margin-top: 50px">
@@ -50,13 +52,7 @@
   </div>
 </div> -->
 
-<div class="savings">
-<p>Your daily consumption of cigarettes before using Last1 was : <%=current_user.consumptions.first.consumption_before_last_one%></p>
-<p>Days of use: <%= @days_of_use %></p>
-<p>Your averaged daily consumption of cigarettes since you are using Last1 is : <%= @averaged_consumption.round(2) %></p>
-<p>Based on your initial daily consumption, since the beginning you have saved: <%= @counter.round(0) %> cigarettes</p>
-<p>Based on your initial daily consumption, since the beginning you have saved: <%= @money_saved.round(2) %> <i style="font-size:24px" class="fa">&#xf155;</i> (based on an average price of 0.75 CAD per cigarette)</p> 
-</div>
+
 
 
 

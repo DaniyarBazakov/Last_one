@@ -14,7 +14,7 @@ class HorribleFactsController < ApplicationController
     #display the HF once the user has clicks on one horrible fact OR display one HF randomly
     @horrible_fact = HorribleFact.where(id: params[:id])
 
-    
+
   end
 
   def random

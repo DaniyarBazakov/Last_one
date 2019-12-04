@@ -1,4 +1,5 @@
 .hf-index {
+  opacity: 0.8;
   background: transparent;
   color:white;
   display: flex;
@@ -23,6 +24,13 @@
   text-align: center;
 }
 
+#random_fact {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #0B0B15;
+  a {
+    color: #0B0B15;
 
+  }
+}
 
 
