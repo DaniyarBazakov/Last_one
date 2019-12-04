@@ -19,11 +19,35 @@ class BetsController < ApplicationController
     end
   end
 
+  # def show
+  #   @user = current_user
+  #   @bet = Bet.find(params[:id])
+  # end
 
   def show
+    @user = current_user
+    # get all the User's consumptions
+    @bet = Bet.find(params[:id])
+    startdate = @bet.date
+    enddate = @bet.date + 6
+
+    arr1 = []
+    @user.consumptions.each do |c|
+      arr1 << c.daily_actual_consumption if c.date >= startdate && c.date <= enddate
+    end
+    @consumption = arr1.sum
+    if @consumption <= @bet.goal # bet is won
+       p @user.wallet
+       @user.wallet += @bet.amount
+       @user.save!
+       p @user.wallet
+       @bet.status = "Congrats! you did it! We are now sending back #{@bet.amount} CAD to your balance"
+       @bet.save!
+    else # bet is lost
+       @bet.status = "You failed! We are now sending on your behalf #{@bet.amount} CAD to an Action on Smoking and Health Association"
+       @bet.save!
+    end
   end
-
-
 
 
 
@@ -36,7 +60,7 @@ class BetsController < ApplicationController
     # raise
     @bet = Bet.new(bet_params)
     if @bet.amount <= @user.wallet
-      @bet.date = Date.today
+      @bet.date = Date.today + 1
       # write code to update wallet
       @user.wallet -= @bet.amount
       @user.save!
@@ -56,14 +80,13 @@ class BetsController < ApplicationController
     end
   end
 
-  def checkmybet
 
-  end
+
 
 private
 
 def bet_params
-  params.require(:bet).permit(:amount)
+  params.require(:bet).permit(:amount, :goal)
 end
 
 
