@@ -26,8 +26,8 @@ class SavingsController < ApplicationController
       end
       
       @money_saved = @counter * 0.75
-      @days_of_use = (Date.today - current_user.consumptions.first.date).to_f
-      @averaged_consumption = (( ( @initial_consumption_in_cigarettes * @days_of_use ) - @counter ) / @days_of_use).round(2)
+      @days_of_use = (Date.today - current_user.consumptions.first.date)
+      @averaged_consumption = (( ( @initial_consumption_in_cigarettes * @days_of_use ) - @counter ) / @days_of_use)
     end
   end
 end

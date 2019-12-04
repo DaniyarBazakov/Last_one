@@ -12,7 +12,9 @@ class HorribleFactsController < ApplicationController
   def show
     @navbar_title = "Horrible Facts"
     #display the HF once the user has clicks on one horrible fact OR display one HF randomly
-    @horrible_fact = HorribleFact.find(params[:id])
+    @horrible_fact = HorribleFact.where(id: params[:id])
+
+    
   end
 
   def random
@@ -20,7 +22,7 @@ class HorribleFactsController < ApplicationController
     if !user_signed_in?
       redirect_to new_user_session_path
     else
-    @horrible_facts = HorribleFact.all
+    @horrible_facts = HorribleFact.all.shuffle
     end
   end
 
