@@ -1,12 +1,17 @@
+
+<% @horrible_f = @horrible_fact.first %>
+
 <% content_for :meta_title, "This is what happens when you smoke" %>
-
-<% content_for :meta_description, @horrible_fact.fact %>
-<% content_for :meta_image, @horrible_fact.photo %>
-
+<% content_for :meta_description, @horrible_f.fact %>
+<% content_for :meta_image, @horrible_f.photo %>
 
 <div class="lo--main-container" >
 
 
+<% @horrible_fact.each do |hf| %>
+    <div>
+
+      <div id="<%= hf.id %>" class="main-div-hf">
 
 
   <div>
