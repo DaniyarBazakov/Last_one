@@ -1,11 +1,19 @@
 <div class="container" style="padding-top: 80px">
-<h1>Challenge yourself !</h1>
+
+<div>
+  Over the last 7 days you smoked <%= @consumption %> cigarettes...
+</div>
+
+
+
+<h1>...Now Challenge yourself !</h1>
 <!-- <p>Find me in app/views/bets/new.html.erb</p> -->
 
 
 <%= simple_form_for(@bet) do |f| %>
-  <%= f.input :amount, label: 'Please enter the amount', required: true %>
-  <%= f.input :goal, label: 'Please enter your goal', required: true %>
+  (Reminder: You have <%= @user.wallet %> C$ on your balance)
+  <%= f.input :amount, label: 'Please enter the amount you want to bet', required: true %>
+  <%= f.input :goal, label: 'Please enter your cigarettes consumption goal', required: true %>
   <%= f.button :submit, "Submit your challenge", class: "btn btn-primary" %>
 <% end %>
 

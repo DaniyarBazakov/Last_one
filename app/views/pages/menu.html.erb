@@ -1,10 +1,50 @@
-<div class="container">
+<div class="lo--main-container">
 
-<ul>
-  <li><%= link_to "Challenge Yourself", bets_home_path %></li>
-  <li>Notifications Frequency</li>
-  <li>Edit my Account</li>
-  <li><%= link_to "Log Out", destroy_user_session_path %></li>
-</ul>
+<!-- style="padding-top: 80px"
+ -->
+<div class="lo--account">
+  <div class="lo--account-content">
+    <div class="lo--account-icon">
+      <i class="far fa-edit"></i>
+    </div>
+    <h4 class="lo--account-text">
+      <%= link_to "Challenge Yourself", bets_home_path, class: "lo--account-text" %>
+    </h4>
+
+  </div>
+
+  <div class="lo--account-content">
+    <div class="lo--account-icon">
+      <i class="fas fa-trophy"></i>
+    </div>
+    <h4 class="lo--account-text">
+      Notifications Settings
+    </h4>
+
+  </div>
+
+  <div class="lo--account-content">
+    <div class="lo--account-icon">
+      <i class="far fa-bell"></i>
+    </div>
+    <h4 class="lo--account-text">
+      Account settings
+    </h4>
+
+  </div>
+
+  <div class="lo--account-content">
+    <div class="lo--account-icon">
+      <i class="fas fa-sign-out-alt"></i>
+    </div>
+    <h4 class="lo--account-text">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    </h4>
+
+  </div>
+</div>
+
+
 
 </div>
+

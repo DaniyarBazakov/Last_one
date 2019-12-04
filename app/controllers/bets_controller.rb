@@ -52,8 +52,20 @@ class BetsController < ApplicationController
 
 
   def new
+    @user = current_user
     @bet = Bet.new
+
+    startdate = Date.today - 7
+    enddate = Date.today - 1
+
+    arr1 = []
+    @user.consumptions.each do |c|
+      arr1 << c.daily_actual_consumption if c.date >= startdate && c.date <= enddate
+    end
+    @consumption = arr1.sum
+
   end
+
 
   def create
     @user = current_user

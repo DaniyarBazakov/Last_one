@@ -13,6 +13,7 @@
   padding: 42px 8px;
   display: flex;
   color: #0C0B1D;
+  text-decoration: none;
   //align-items: baseline;
   &:last-child {
     border-bottom: 0px;
@@ -28,7 +29,11 @@
   font-size: 19px;
   font-family: $headers-font;
   font-weight: 700;
-
+  text-decoration: none;
+    a {
+      text-decoration: none;
+      color: #0C0B1D;
+    }
 }
 
 
