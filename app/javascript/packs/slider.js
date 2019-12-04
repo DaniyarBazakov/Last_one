@@ -9,46 +9,48 @@ $('.horrible-fact-slider').slick(
   });
 
 
-// $('.horrible-fact-slider').on('swipe', function(event, slick, direction){
-//   console.log(direction);
-//   console.log(slick);
- 
-//   // select all with class .random-card
-//    var x = document.querySelectorAll(".random-card")
+$('.horrible-fact-slider').on('swipe', function(event, slick, direction){
+  console.log(direction);
+  console.log(slick);
 
-//   // check their parents
-//   let activeElement = null;
+  // select all with class .random-card
+   var x = document.querySelectorAll(".random-card")
 
-//   x.forEach((el) => {
-//     if (el.parentElement.parentElement.getAttribute("aria-hidden") === "false") {
-//       // when we find a parent with attribute aria-hidden=false => that's our active slide
-//       // reselect le children pour extract le id de la carte
+  // check their parents
+  let activeElement = null;
 
-//       activeElement = el;
-//     };
-//   });
+  x.forEach((el) => {
+    if (el.parentElement.parentElement.getAttribute("aria-hidden") === "false") {
+      // when we find a parent with attribute aria-hidden=false => that's our active slide
+      // reselect le children pour extract le id de la carte
+      activeElement = el;
+    };
+  });
 
-//   // extraire le fact de la carte id-fact
-//   let idFact = activeElement.querySelector(".card-fact p").innerText
-//   console.log(idFact)
-//   // extraire la photo de la carte id-photo
-//   let idPhoto = activeElement.querySelector(".card-photo img").getAttribute("src")
-//   console.log(idPhoto)
-
-//   // remove le meta tag de og-description
-//   $('meta[property="og:description"]').remove();
-//   $('head').append( `<meta property="og:description" content="${idFact}">` );
-
-//   $('meta[property="og:image"]').remove();
-//   $('head').append( `<meta property="og:image" content="${idPhoto}">` );
-
-//   const fbShareBtn = document.querySelector(".fb-share-button")
-//   const originalUrl = fbShareBtn.getAttribute("data-href");
-//   fbShareBtn.setAttribute("data-href", originalUrl + "/horrible_facts/" + activeElement.id);
+  console.log("Found the active element", activeElement);
 
 
-//     // ajouter le meta tag de description
-//   // remove le meta tag de og-image 
-//     // ajouter le meta tag de image
+  // extraire le fact de la carte id-fact
+  let idFact = activeElement.querySelector(".card-fact p").innerText
+  console.log(idFact)
+  // extraire la photo de la carte id-photo
+  let idPhoto = activeElement.querySelector(".card-photo img").getAttribute("src")
+  console.log(idPhoto)
 
-// });
+  // remove le meta tag de og-description
+  $('meta[property="og:description"]').remove();
+  $('head').append( `<meta property="og:description" content="${idFact}">` );
+
+  $('meta[property="og:image"]').remove();
+  $('head').append( `<meta property="og:image" content="${idPhoto}">` );
+
+  const fbShareBtn = document.querySelector(".fb-share-button")
+  const getUrl = window.location;
+  fbShareBtn.setAttribute("data-href", getUrl.protocol + "//" + getUrl.host + "/horrible_facts/" + activeElement.id);
+
+
+    // ajouter le meta tag de description
+  // remove le meta tag de og-image
+    // ajouter le meta tag de image
+
+});
