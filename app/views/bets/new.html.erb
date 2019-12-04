@@ -1,15 +1,20 @@
 <div class="container" style="padding-top: 80px">
-<h1>Bets#new</h1>
+<h1>Challenge yourself !</h1>
 <!-- <p>Find me in app/views/bets/new.html.erb</p> -->
-
-<h1>This is where you must code a form to submit a bet</h1>
-
 
 
 <%= simple_form_for(@bet) do |f| %>
-  <%= f.input :amount, label: 'Please type the amount', required: true %>
-  <%= f.button :submit, "Submit your challenge" %>
+  <%= f.input :amount, label: 'Please enter the amount', required: true %>
+  <%= f.input :goal, label: 'Please enter your goal', required: true %>
+  <%= f.button :submit, "Submit your challenge", class: "btn btn-primary" %>
 <% end %>
+
+<!-- redirect to index -->
+
+<div style="padding-top: 80px">
+  <%= link_to "Previous page", bets_home_path %>
+</div>
+
 
 </div>
 
