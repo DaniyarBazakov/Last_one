@@ -7,32 +7,82 @@
 .bet-home-submit-btn {
   background: white;
   border-radius: 40px;
-  padding: 15px 32px;
+  padding: 10px 32px;
   color: $dark-gray;
   font-family: $btn-font;
-  width: 220px;
+  width: 160px;
+  font-size: 20px;
+  input {
+
+  }
+
 
 }
 
 
 .bet-home-field-tag-lo--circle {
+
   border-color: $color-circle;
   border-style: solid;
   border-width: 20px;
   border-radius: 50%;
-  width: 220px;
+  width: 200px;
   display: flex;
   margin: auto;
-  height: 220px;
+  height: 200px;
   align-items: center;
   justify-content: space-evenly;
 
 }
 
 
-.2-circles {
-
+#wallet-money {
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  border-style: none;
 
 }
 
+
+.2-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.press {
+  text-align: center;
+  color: white;
+
+}
+
+.text-bet-home {
+  padding-top: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px
+}
+
+.text-link-bet-home {
+
+  color: #0B0B15;
+  border: 2.3px solid #0B0B15;
+  border-radius: 8px;
+  text-align: center;
+
+  padding: 10px;
+  width: 167px;
+  background-color: rgba(255, 255, 255, 0.8);
+  a {
+    color: #0B0B15;
+  }
+}
+
+.text-link {
+  display: flex;
+  justify-content: space-around;
+
+}
 

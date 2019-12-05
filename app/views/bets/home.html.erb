@@ -1,55 +1,50 @@
-<div class="container" style="padding-top: 80px">
+<div class="lo--main-container">
 <!-- <h1>Bets#home</h1> -->
 <!-- <p>Find me in app/views/bets/home.html.erb</p> -->
 
-<div style="padding-top: 20px">
-You have <%= @pendingbets.length %> pending challenge<%= @pendingbets.size == 0 ? "" : "s" %>.
+<div  class="text-bet-home" >
+You have <%= @pendingbets.length %> result<%= @pendingbets.size == 0 ? "" : "s" %> for your challenges
 </div>
 
-<div style="padding-top: 20px">
-<%= link_to "Check my challenges", bets_path %>
+<div class="text-link">
+  <div class="text-link-bet-home" >
+    <%= link_to "Check results", bets_path %> <i class="far fa-check-square"></i>
+  </div>
+
+  <div class="text-link-bet-home" >
+    <%= link_to "New challenge", new_bet_path %> <i class="fas fa-dumbbell"></i>
+  </div>
 </div>
 
-<div style="padding-top: 20px">
-<%= link_to "Submit a challenge", new_bet_path %>
+<div class="text-bet-home" >
+Your balance is  <%= @user.wallet %> CAD
 </div>
 
-<div style="padding-top: 20px">
-Your balance is : <%= @user.wallet %> C$
+<div class="bet-home-field-tag-lo--circle">
+  <input type="number" id="wallet-money" >
 </div>
 
-<input type="number" id="wallet-money">
+<p class="press">Press the circle to choose the value</p>
 
 
-<div class="2-circles">
-
+<div class="2-btns" style="
+    display: flex;
+    justify-content: space-around;">
   <%= form_tag(deposits_path, method: :post) do  %>
-    <div style="padding-top: 20px">
-      <p>Deposit</p>
-      <div class="bet-home-field-tag-lo--circle">
-        <%= hidden_field_tag "user[wallet_deposit]" %>
-      </div>
-      <div class="bet-home-submit-btn">
-        <%= submit_tag("Submit deposit") %> <!-- placeholder ?  -->
-      </div>
-    </div>
+  <%= hidden_field_tag "user[wallet_deposit]" %>
+  <div class="bet-home-submit-btn">
+    <%= submit_tag("Deposit") %> <!-- placeholder ?  -->
+  </div>
   <% end %>
 
   <%= form_tag(withdrawals_path, method: :post) do  %>
-    <div style="padding-top: 20px">
-      <p>Withdraw</p>
-      <div class="bet-home-field-tag-lo--circle">
-        <%= hidden_field_tag("user[wallet_withdraw]", 0) %>
-        <%#= number_field_tag("user[wallet]", 0) %> <!-- placeholder ?  -->
-      </div>
-      <div class="bet-home-submit-btn">
-        <%= submit_tag("Submit withdrawal") %>
-      </div>
-    <div>
+  <%= hidden_field_tag("user[wallet_withdraw]", 0) %>
+  <div class="bet-home-submit-btn">
+    <%= submit_tag("Withdraw") %>
+  </div>
   <% end %>
 </div>
 
 
-</div>
 
 <%= javascript_pack_tag "new-wallet" %>
