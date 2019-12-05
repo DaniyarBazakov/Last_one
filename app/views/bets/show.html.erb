@@ -1,29 +1,32 @@
-<div class="container" style="padding-top: 80px">
-<h1> My Challenge</h1>
+<div class="lo--main-container">
+<h1 style="font-weight: 700;
+  font-size: 45px;
+  border-bottom: 3px solid;" > My Result</h1>
 <!-- <p>Find me in app/views/bets/show.html.erb</p> -->
 
+<div class="text-bet-show">
+  <div>
+  Amount of your challenge : <%= @bet.amount %>
+  </div>
 
-<div>
-Amount of your challenge : <%= @bet.amount %>
-</div>
+  <div>
+  Your Goal : <%= @bet.goal %>
+  </div>
 
-<div>
-Your Goal : <%= @bet.goal %>
-</div>
-
-<div>
-Your consumption for the Challenge period : <%= @consumption %>
-</div>
+  <div>
+  Your consumption for the Challenge period : <%= @consumption %>
+  </div>
 
 <br><br>
 
 <!-- Display customized msg if challenge is won -->
 <!-- Display customized msg if challenge is lost -->
-<div style="" id="betResult"><%= @bet.status %></div>
+  <div style="" id="betResult"><%= @bet.status %></div>
+</div>
 
 
 <br><br>
-<div>
+<div class="lo--button-mauve-bet-show">
 <!-- redirect to index -->
 <%= link_to "Back to all my challenges", bets_path %>
 </div>

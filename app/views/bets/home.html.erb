@@ -8,7 +8,9 @@ You have <%= @pendingbets.length %> result<%= @pendingbets.size == 0 ? "" : "s" 
 
 <div class="text-link">
   <div class="text-link-bet-home" >
-    <%= link_to "Check results", bets_path %> <i class="far fa-check-square"></i>
+    <%= link_to bets_path do %>
+      <span>Check results <i class="far fa-check-square"></i></span>
+    <% end %>
   </div>
 
   <div class="text-link-bet-home" >
@@ -19,10 +21,9 @@ You have <%= @pendingbets.length %> result<%= @pendingbets.size == 0 ? "" : "s" 
 
 
 <div class="bet-home-field-tag-lo--circle">
-  <input type="number" id="wallet-money" >
+  <input type="number" id="wallet-money" placeholder="<%= @user.wallet %>" >
 </div>
 
-<p class="press">Press the circle to choose the value</p>
 
 <div class="text2-bet-home" >
 Your balance is  <%= @user.wallet %> CAD

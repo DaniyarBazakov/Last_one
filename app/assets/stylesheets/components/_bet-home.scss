@@ -10,8 +10,9 @@
   padding: 10px 32px;
   color: $dark-gray;
   font-family: $btn-font;
-  width: 160px;
+  width: 100%;
   font-size: 20px;
+  text-align: center;
   input {
 
   }
@@ -76,23 +77,58 @@
 
 .text-link-bet-home {
 
-  color: #0B0B15;
-  border: 2.3px solid #0B0B15;
-  border-radius: 8px;
+  color: white;
+  border-bottom: 2.3px solid white;
   text-align: center;
-
+  width: 44%;
+  margin: auto;
   padding: 10px;
-  width: 167px;
-  background-color: rgba(255, 255, 255, 0.8);
+
   a {
-    color: #0B0B15;
+    color: white;
   }
 }
+
+.text-link-bet-home-2 {
+
+  color: white;
+  text-align: center;
+  width: 44%;
+  margin: auto;
+  padding: 10px;
+
+  a {
+    color: white;
+  }
+}
+
+
+.text-link-bet-home a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 
 .text-link {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
 
+}
+
+
+.lo-bet-title {
+}
+
+.lo-bet-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .title {
+    border-bottom: 1px solid white;
+  }
+  .content {
+    font-weight: 400;
+  }
 }
 

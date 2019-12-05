@@ -4,3 +4,20 @@ form {
     margin-bottom: 0px;
   }
 }
+
+.bet-home-field-tag-lo--circle {
+  input {
+    height: 52px;
+    // padding-top: 24px;
+    font-size: 48px;
+  }
+  input:focus {
+    outline: none;
+    border: 0;
+  }
+  ::placeholder {
+    opacity: 1;
+    color: white;
+    font-size: 48px;
+  }
+}
