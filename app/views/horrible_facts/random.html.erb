@@ -6,8 +6,8 @@
 <div class="lo--main-container">
 
   <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root">
-    </div>
+  <div id="fb-root">
+  </div>
 
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,34 +18,31 @@
   }(document, 'script', 'facebook-jssdk'));</script>
 
   <!-- Your share button code -->
-
-    <div class="fb-share-button"
-      data-href="https://mylast1.herokuapp.com/horrible_facts/<%= @horrible_fact.id %>"
-      data-layout="button_count"
-      style="margin-top: auto; margin-bottom: 100px; margin-left: auto;">
-    </div>
+  <div class="fb-share-button"
+    data-href="https://mylast1.herokuapp.com/horrible_facts/<%= @horrible_fact.id %>"
+    data-layout="button_count"
+    style="margin-top: auto; margin-bottom: 100px; margin-left: auto;">
+  </div>
 
   <div class="horrible-fact-slider">
 
     <% @horrible_facts.each do |hf| %>
+    
+      <div id="<%= hf.id %>" class="main-div-hf random-card">
 
+        <div class="card-fact">
+          <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
+        </div>
 
-        <div id="<%= hf.id %>" class="main-div-hf random-card">
-
-          <div class="card-fact">
-            <p class="<%= hf.id %>-fact"><%=hf.fact%></p>
-          </div>
-
-          <div class="card-photo">
-           <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
-          </div>
-
-
+        <div class="card-photo">
+          <img class="<%= hf.id %>-photo" src=<%= hf.photo %> >
+        </div>
 
       </div>
-    <% end %>
-  </div>
 
+    <% end %>
+  
+  </div>
 </div>
 
 
