@@ -21,7 +21,7 @@ You have <%= @pendingbets.length %> result<%= @pendingbets.size == 0 ? "" : "s" 
 
 
 <div class="bet-home-field-tag-lo--circle">
-  <input type="number" id="wallet-money" placeholder="<%= @user.wallet %>" >
+  <input type="number" id="wallet-money" placeholder="0" >
 </div>
 
 
@@ -46,7 +46,5 @@ Your balance is  <%= @user.wallet %> CAD
   </div>
   <% end %>
 </div>
-
-
 
 <%= javascript_pack_tag "new-wallet" %>

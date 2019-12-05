@@ -1,29 +1,31 @@
 <div class="lo--main-container">
 
-<div>
-  Over the last 7 days you smoked <%= @consumption %> cigarettes...
+
+  <div>
+    <h1 class="h1-new">It's time to challenge yourself!</h1>
+    <!-- <p>Find me in app/views/bets/new.html.erb</p> -->
+  </div>
+
+  <%= simple_form_for(@bet) do |f| %>
+    <div class="input-new-bet-2">
+      <div class="input-new-bet">
+        <%= f.input :amount, label: 'Amount', required: true %>
+      </div>
+      <div class="input-new-bet">
+        <%= f.input :goal, label: 'Cigarette', required: true %>
+      </div>
+    </div>
+    <div class="lo--button-white-new">
+      <%= f.button :submit, "Submit"%>
+    </div>
+  <% end %>
+
+
+<p class="p-new">
+  You have <%= @user.wallet %> C$ on your balance
+</p>
+  <!-- redirect to index -->
+  <div class="lo--button-mauve-2">
+    <%= link_to "Previous page", bets_home_path %>
+  </div>
 </div>
-
-
-
-<h1>...Now Challenge yourself !</h1>
-<!-- <p>Find me in app/views/bets/new.html.erb</p> -->
-
-
-<%= simple_form_for(@bet) do |f| %>
-  (Reminder: You have <%= @user.wallet %> C$ on your balance)
-  <%= f.input :amount, label: 'Please enter the amount you want to bet', required: true %>
-  <%= f.input :goal, label: 'Please enter your cigarettes consumption goal', required: true %>
-  <%= f.button :submit, "Submit your challenge", class: "btn btn-primary" %>
-<% end %>
-
-<!-- redirect to index -->
-
-<div style="padding-top: 80px">
-  <%= link_to "Previous page", bets_home_path %>
-</div>
-
-
-</div>
-
-
