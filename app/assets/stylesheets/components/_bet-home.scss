@@ -53,11 +53,20 @@
 .press {
   text-align: center;
   color: white;
-
+  font-variant: petite-caps;
 }
 
 .text-bet-home {
   padding-top: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px
+}
+
+.text2-bet-home {
+  padding-top: 10px;
   color: white;
   font-weight: bold;
   text-align: center;
@@ -83,6 +92,7 @@
 .text-link {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 
 }
 

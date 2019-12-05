@@ -16,9 +16,7 @@ You have <%= @pendingbets.length %> result<%= @pendingbets.size == 0 ? "" : "s" 
   </div>
 </div>
 
-<div class="text-bet-home" >
-Your balance is  <%= @user.wallet %> CAD
-</div>
+
 
 <div class="bet-home-field-tag-lo--circle">
   <input type="number" id="wallet-money" >
@@ -26,6 +24,9 @@ Your balance is  <%= @user.wallet %> CAD
 
 <p class="press">Press the circle to choose the value</p>
 
+<div class="text2-bet-home" >
+Your balance is  <%= @user.wallet %> CAD
+</div>
 
 <div class="2-btns" style="
     display: flex;
