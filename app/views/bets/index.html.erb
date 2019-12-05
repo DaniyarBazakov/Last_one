@@ -3,11 +3,11 @@
 <!-- <p>Find me in app/views/bets.index.html.erb</p> -->
     <% if @pendingbets.length == 0 %>
 
-      <p>You have no pending challenges</p>
+      <h5 class="h5-index-bet">You don't have any challenges</h5>
 
     <% else %>
 
-      <h5>Your pending challenges:</h5>
+      <h5 class="h5-index-bet">Your challenges</h5>
 
     <div>
       <% @pendingbets.each do |b| %>
@@ -18,7 +18,7 @@
 
               <div class="lo-bet-amount">
                 <p class="title">Amount</p>
-                <p class="content"><%= b.amount %> C$</p>
+                <p class="content"><%= b.amount %> CAD</p>
               </div>
 
               <div class="lo-bet-goal">
