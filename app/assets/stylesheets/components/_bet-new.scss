@@ -2,11 +2,15 @@
   text-align: center;
   font-weight: bold;
   color: white;
+  padding-bottom: 50px;
+  font-size: 36px;
 }
 
 .p-new {
   text-align: center;
   margin-top: 36px;
+  font-weight: bold;
+  color: white;
 }
 
 .lo--button-white-new {
@@ -17,7 +21,11 @@
   font-family: $btn-font;
   width: 220px;
   text-align: center;
-  margin: auto;
+  margin: 24px auto;
+    input {
+      font-weight: bold;
+    }
+
 
 
 }
@@ -27,6 +35,7 @@
   justify-content: space-around;
   .input-new-bet {
     width: 45%;
+    border-radius: 10%;
   }
 }
 
@@ -34,7 +43,35 @@
   text-decoration: none;
 }
 
+.form-group.integer.optional.bet_amount label {
+  text-align: center;
+  width: 100%;
+  color: white;
 
+}
 
+.form-group.integer.optional.bet_goal label {
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.lo-border-input {
+ background-color: transparent;
+ border: none;
+ border-bottom: 2px solid white;
+ color: white;
+ text-align: center;
+ font-size: 24px;
+ height: 34px;
+ width: 50%;
+margin: auto;
+
+}
+
+ ::placeholder {
+  opacity: 1 !important;
+  color: white !important;
+ }
 
 

@@ -1,6 +1,10 @@
 <div class="lo--main-container">
-<!-- <p>Find me in app/views/bets/new.html.erb</p> -->
 
+  <div>
+  <h5 style="color: white; text-align: center; font-size: 15px; margin-bottom: 25px;">Over the last 7 days you smoked <%= @consumption %> cigarettes... </h5>
+
+
+</div>
 
 <div>
     <h1 class="h1-new">It's time to challenge yourself!</h1>
@@ -9,10 +13,10 @@
   <%= simple_form_for(@bet) do |f| %>
     <div class="input-new-bet-2">
       <div class="input-new-bet">
-        <%= f.input :amount, label: 'Amount', required: true %>
+        <%= f.input :amount, label: 'Amount CAD', placeholder: "45", input_html: {class: "lo-border-input"} %>
       </div>
       <div class="input-new-bet">
-        <%= f.input :goal, label: 'Cigarette', required: true %>
+        <%= f.input :goal, label: 'Cigarettes', placeholder: "12", input_html: {class: "lo-border-input"} %>
       </div>
     </div>
     <div class="lo--button-white-new">
@@ -22,7 +26,7 @@
 
 
 <p class="p-new">
-  You have <%= @user.wallet %> C$ on your balance
+  You have <%= @user.wallet %> CAD on your balance
 </p>
   <!-- redirect to index -->
   <div class="lo--button-mauve-2">
