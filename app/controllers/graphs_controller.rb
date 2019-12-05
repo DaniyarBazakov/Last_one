@@ -1,9 +1,13 @@
 class GraphsController < ApplicationController
 
   def home
+
+    #### THE CODE BELOW IS FOR THE INDICATORS
+
     if !user_signed_in?
       redirect_to new_user_session_path
     else
+
     @navbar_title = "Evolution"
     # so we can inject it in JS, we need to collect the result as shown below
     # [{x: '2019-11-26', y: 1 }, {t: '2019-11-25', y: 10 }, {t: '2019-11-24', y: 20 }]
@@ -12,13 +16,6 @@ class GraphsController < ApplicationController
     @last30 = consumptionforjs(30)
     @alltime = consumptionforjs(alltimeappuse)
     @dayslost = sec_to_j(lifeloss)
-    end
-
-    #### THE CODE BELOW IS FOR THE INDICATORS
-
-    if !user_signed_in?
-      redirect_to new_user_session_path
-    else
 
       @day_consumption = current_user.consumptions.find_by(date: Date.today) #do not add .daily_actual_consumption because if value == nil the code will break
       @price_per_cigarette = 0.75 #The TA told me that it's useless to hardcode this value within the DB. It's the same to have it hardcoded in the code or in the DB as it's always the same value
