@@ -128,29 +128,23 @@ i -= 1
 end
 
 until i == 10
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(26..31), date: Date.today - i})
+Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(32..39), date: Date.today - i})
 i -= 1
 end
 
 until i == 5
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(24..29), date: Date.today - i})
+Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(26..33), date: Date.today - i})
 i -= 1
 end
 
 until i == 0
-Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(23...24), date: Date.today - i})
+Consumption.create!({user: user1, daily_actual_consumption: Random.new.rand(23...25), date: Date.today - i})
 i -= 1
 end
 
-puts 'Creating some Challenges older than 7 days...'
+puts 'Creating one Challenge older than 7 days...'
 
-
-Bet.create!({user: user1, goal: 210, date: Date.today - 10, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 215, date: Date.today - 9, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 220, date: Date.today - 8, amount: 12, status: "pending"})
-Bet.create!({user: user1, goal: 150, date: Date.today - 10, amount: 10, status: "pending"})
-Bet.create!({user: user1, goal: 155, date: Date.today - 9, amount: 10, status: "pending"})
-Bet.create!({user: user1, goal: 160, date: Date.today - 8, amount: 10, status: "pending"})
+Bet.create!({user: user1, goal: 140, date: Date.today - 8, amount: 10, status: "pending"})
 
 
 puts 'Finished!'
