@@ -1,6 +1,7 @@
 class BetsController < ApplicationController
 
   def home
+    @navbar_title = "Challenge"
     @user = current_user
     @pendingbets = []
 
@@ -11,6 +12,7 @@ class BetsController < ApplicationController
 
 
   def index
+    @navbar_title = "Challenge"
     @user = current_user
     @pendingbets = []
 
@@ -25,6 +27,7 @@ class BetsController < ApplicationController
   # end
 
   def show
+    @navbar_title = "Challenge"
     @user = current_user
     # get all the User's consumptions
     @bet = Bet.find(params[:id])
@@ -52,6 +55,7 @@ class BetsController < ApplicationController
 
 
   def new
+    @navbar_title = "Challenge"
     @user = current_user
     @bet = Bet.new
 
@@ -68,6 +72,7 @@ class BetsController < ApplicationController
 
 
   def create
+    @navbar_title = "Challenge"
     @user = current_user
     # raise
     @bet = Bet.new(bet_params)

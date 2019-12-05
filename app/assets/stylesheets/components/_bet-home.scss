@@ -7,32 +7,129 @@
 .bet-home-submit-btn {
   background: white;
   border-radius: 40px;
-  padding: 15px 32px;
+  padding: 10px 32px;
   color: $dark-gray;
   font-family: $btn-font;
-  width: 220px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  input {
+
+  }
+
 
 }
 
 
 .bet-home-field-tag-lo--circle {
+
   border-color: $color-circle;
   border-style: solid;
   border-width: 20px;
   border-radius: 50%;
-  width: 220px;
+  width: 200px;
   display: flex;
   margin: auto;
-  height: 220px;
+  height: 200px;
   align-items: center;
   justify-content: space-evenly;
 
 }
 
 
-.2-circles {
-
+#wallet-money {
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  border-style: none;
+  width: 140px;
 
 }
 
+
+.2-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.press {
+  text-align: center;
+  color: white;
+  font-variant: petite-caps;
+}
+
+.text-bet-home {
+  padding-top: 20px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px
+}
+
+.text2-bet-home {
+  padding-top: 10px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 20px
+}
+
+.text-link-bet-home {
+
+  color: white;
+  border-bottom: 2.3px solid white;
+  text-align: center;
+  width: 44%;
+  margin: auto;
+  padding: 10px;
+
+  a {
+    color: white;
+  }
+}
+
+.text-link-bet-home-2 {
+
+  color: white;
+  text-align: center;
+  width: 44%;
+  margin: auto;
+  padding: 10px;
+
+  a {
+    color: white;
+  }
+}
+
+
+.text-link-bet-home a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+.text-link {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+
+}
+
+
+.lo-bet-title {
+}
+
+.lo-bet-description {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .title {
+    border-bottom: 1px solid white;
+  }
+  .content {
+    font-weight: 400;
+  }
+}
 

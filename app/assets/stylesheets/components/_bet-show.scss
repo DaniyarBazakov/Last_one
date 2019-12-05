@@ -1,0 +1,35 @@
+
+#show {
+  h1 {
+  font-weight: 700;
+  font-size: 45px;
+  border-bottom: 3px solid;
+  }
+}
+
+.lo--button-mauve-bet-show {
+  background: $dark-gray;
+  border-radius: 40px;
+  padding: 8px 25px;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  font-family: $btn-font;
+  width: 260px;
+  text-align: center;
+  margin: auto;
+  a {
+    color: white;
+  }
+}
+
+.text-bet-show {
+  padding-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  font-size: 21px;
+}
+
+
