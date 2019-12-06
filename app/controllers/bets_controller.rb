@@ -44,9 +44,11 @@ class BetsController < ApplicationController
        @user.wallet += @bet.amount
        @user.save!
        p @user.wallet
+       @betmessage = "Congrats!"
        @bet.status = "Congrats! you did it! We are now sending back #{@bet.amount} CAD to your balance"
        @bet.save!
     else # bet is lost
+      @betmessage = "You failed!"
        @bet.status = "You failed! We are now sending on your behalf #{@bet.amount} CAD to an Action on Smoking and Health Association"
        @bet.save!
     end
