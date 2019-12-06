@@ -32,7 +32,8 @@ class GraphsController < ApplicationController
       @counter = 0
 
       @sum_of_consumptions.each do |soc|
-        cigarettes_saved = current_user.consumptions.first.consumption_before_last_one - soc[:daily_actual_consumption]
+        # TODO: Fix this demo day trick
+        cigarettes_saved = (current_user.consumptions.first.consumption_before_last_one || 60) - soc[:daily_actual_consumption]
         @counter += cigarettes_saved
       end
       
