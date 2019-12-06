@@ -1,0 +1,29 @@
+.lo--landing-page {
+  background: linear-gradient(#181212 31%, #3d3434 99%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lo--landing-logo {
+  display: block;
+  width: 75%;
+  margin: 16px auto;
+  max-width: 100vw;
+}
+
+.lo--landing-content {
+  margin-bottom: 20vh;
+  text-align: center;
+  color: white;
+}
+
+.lo--landing-text {
+  margin-bottom: 48px;
+}

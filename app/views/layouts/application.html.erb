@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- app/views/offers/show.html.erb -->
-   
+
 
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
@@ -39,9 +39,13 @@
   </head>
   <body>
     <div class="wrapper">
-      <%= render 'shared/navbar' %>
+      <% unless action_name == "landing" %>
+        <%= render 'shared/navbar' %>
+      <% end %>
       <%= yield %>
-      <%= render 'shared/footer' %>
+      <% unless action_name == "landing" %>
+        <%= render 'shared/footer' %>
+      <% end %>
     </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
