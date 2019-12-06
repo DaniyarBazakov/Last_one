@@ -1,0 +1,45 @@
+.lo--landing-page {
+  background: linear-gradient(#181212 31%, #3d3434 99%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lo--landing-logo {
+  display: block;
+  width: 75%;
+  margin: 16px auto;
+  max-width: 100vw;
+}
+
+.lo--landing-content {
+  margin-bottom: 20vh;
+  text-align: center;
+  color: #BBA983;
+
+  h1 {
+    margin-bottom: 60px;
+  }
+
+}
+
+.lo--landing-text {
+  margin-bottom: 48px;
+  color: #BBA983
+}
+
+.lo--button-white-l {
+  background: white;
+  border-radius: 40px;
+  padding: 15px 32px;
+  color: $dark-gray;
+  font-family: $btn-font;
+  width: 220px;
+  font-weight: bold;
+}
