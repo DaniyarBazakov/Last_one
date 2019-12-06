@@ -6,8 +6,9 @@ class HorribleFactMailer < ApplicationMailer
   #
   def scareuser
     @user = params[:user] # Instance variable => available in view
-    @horriblefactphoto = HorribleFact.all.sample(1)[0].photo
-    @horriblefacttext = HorribleFact.all.sample(1)[0].fact
+    @horrible_fact = HorribleFact.all.sample(1)[0]
+    @horriblefactphoto = @horrible_fact.photo
+    @horriblefacttext = @horrible_fact.fact
     mail(to: @user.email, subject: 'Stop smoking !!!')
     # mail(to: 'jovialiste82@yahoo.fr', subject: 'Stop smoking !!!')
     # This will render a view in `app/views/horrible_fact_mailer`!

@@ -17,12 +17,12 @@ test it here : http://localhost:3000/rails/mailers/horrible_fact_mailer/scareuse
         display: flex;
         flex-direction: column;
         align-items: center;">
-      <img class="scareuser-logo" style="width: 330px; margin-left: 9px;" src="<%= image_path "last_one.jpg" %>" alt="">
-      <h1 style="text-align: center; color: #c2af8c;">STOP SMOKING!</h1>
+      <img class="scareuser-logo" style="max-width: 100%" src="https://res.cloudinary.com/dim7avfq3/image/upload/v1575586085/ast_one_vckr2i.jpg" alt="">
+      <h1 style="text-align: center; color: #c2af8c; display: none;">STOP SMOKING!</h1>
     </div>
     <div class="loo-scareuser-fact">
       <p style="color: #c2af8c; text-align: center; font-family: $btn-font;"><%= @horriblefacttext %></p>
-      <img class="scareuser-img" style="width: 329px; margin-left: 9px;" src="<%= @horriblefactphoto %>" alt="">
+      <img class="scareuser-img" style="max-width: 100%" src="<%= @horriblefactphoto %>" alt="">
     </div>
 
     <a href="http://localhost:3000" target="_blank"><p style="color: #c2af8c; border-style: solid;
