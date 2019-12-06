@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get '/landing', to: "pages#landing"
 
   get 'pages/menu'
   get 'bets/home'
