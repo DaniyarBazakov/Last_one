@@ -19,7 +19,7 @@ class GraphsController < ApplicationController
 
       @day_consumption = current_user.consumptions.find_by(date: Date.today) #do not add .daily_actual_consumption because if value == nil the code will break
       @price_per_cigarette = 0.75 #The TA told me that it's useless to hardcode this value within the DB. It's the same to have it hardcoded in the code or in the DB as it's always the same value
-      @initial_consumption_in_cigarettes = current_user.consumptions.first.consumption_before_last_one
+      @initial_consumption_in_cigarettes = current_user.consumptions.first.consumption_before_last_one || 60
 
       if @day_consumption == nil
         @default_consumption = 0
